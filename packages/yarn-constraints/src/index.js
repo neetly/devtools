@@ -1,0 +1,61 @@
+/**
+ * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
+ */
+exports.enforceConsistentDependencies = ({ Yarn }) => {
+  for (const dependency of Yarn.dependencies()) {
+    if (Yarn.workspace({ ident: dependency.ident })) {
+      if (dependency.type !== "peerDependencies") {
+        dependency.update("workspace:*");
+      } else {
+        dependency.update("workspace:^");
+      }
+    }
+  }
+
+  for (const dependency of Yarn.dependencies()) {
+    if (
+      !Yarn.workspace({ ident: dependency.ident }) &&
+      dependency.type !== "peerDependencies" &&
+      !/(?<!^npm):/.test(dependency.range) &&
+      dependency.resolution?.version
+    ) {
+      dependency.update(dependency.resolution.version);
+    }
+  }
+
+  for (const dependency of Yarn.dependencies()) {
+    if (dependency.type !== "peerDependencies") {
+      for (const otherDependency of Yarn.dependencies({
+        ident: dependency.ident,
+      })) {
+        if (otherDependency.type !== "peerDependencies") {
+          dependency.update(otherDependency.range);
+        }
+      }
+    }
+  }
+
+  for (const dependency of Yarn.dependencies({ type: "dependencies" })) {
+    const otherDependency = Yarn.dependency({
+      workspace: dependency.workspace,
+      ident: dependency.ident,
+      type: "devDependencies",
+    });
+    if (otherDependency) {
+      otherDependency.delete();
+    }
+  }
+
+  for (const dependency of Yarn.dependencies({ type: "peerDependencies" })) {
+    const otherDependency = Yarn.dependency({
+      workspace: dependency.workspace,
+      ident: dependency.ident,
+      type: "devDependencies",
+    });
+    if (!otherDependency) {
+      dependency.error(
+        `yarn workspace ${dependency.workspace.ident} add --dev --exact ${dependency.ident}`,
+      );
+    }
+  }
+};

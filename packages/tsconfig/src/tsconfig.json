@@ -1,0 +1,10 @@
+{
+  "extends": "@neetly/tsconfig/base",
+
+  "include": ["${configDir}/src"],
+
+  "compilerOptions": {
+    "rootDir": "${configDir}/src",
+    "outDir": "${configDir}/lib"
+  }
+}

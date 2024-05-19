@@ -1,0 +1,30 @@
+{
+  "name": "@neetly/yarn-constraints",
+  "version": "1.0.0-alpha.0",
+  "homepage": "https://github.com/neetly/devtools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neetly/devtools.git",
+    "directory": "packages/yarn-constraints"
+  },
+  "license": "MIT",
+  "exports": {
+    "default": "./src/index.js",
+    "types": "./lib/index.d.ts"
+  },
+  "files": [
+    "./src",
+    "./lib"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "build:clean": "tsc --build --clean",
+    "prepack": "run build:clean && run build && cp ../../LICENSE ./"
+  },
+  "devDependencies": {
+    "@neetly/tsconfig": "workspace:*",
+    "@types/node": "20.12.12",
+    "@yarnpkg/types": "4.0.0",
+    "typescript": "5.5.0-beta"
+  }
+}

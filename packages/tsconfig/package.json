@@ -1,0 +1,27 @@
+{
+  "name": "@neetly/tsconfig",
+  "version": "1.0.0-alpha.0",
+  "homepage": "https://github.com/neetly/devtools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neetly/devtools.git",
+    "directory": "packages/tsconfig"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": "./src/tsconfig.json",
+    "./base": "./src/base/tsconfig.json"
+  },
+  "files": [
+    "./src"
+  ],
+  "scripts": {
+    "prepack": "cp ../../LICENSE ./"
+  },
+  "peerDependencies": {
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "typescript": "5.5.0-beta"
+  }
+}

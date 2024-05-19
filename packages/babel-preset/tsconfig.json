@@ -1,0 +1,9 @@
+{
+  "extends": "@neetly/tsconfig",
+
+  "compilerOptions": {
+    "checkJs": true,
+
+    "types": ["node"]
+  }
+}

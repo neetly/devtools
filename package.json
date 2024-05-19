@@ -1,0 +1,21 @@
+{
+  "name": "@neetly/devtools",
+  "private": true,
+  "workspaces": [
+    "./packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach --all --topological-dev run build",
+    "build:clean": "yarn workspaces foreach --all --topological-dev run build:clean",
+    "check": "prettier --check .",
+    "check:apply": "prettier --write .",
+    "publish": "yarn workspaces foreach --all --no-private npm publish --tolerate-republish"
+  },
+  "devDependencies": {
+    "@neetly/yarn-constraints": "workspace:*",
+    "@yarnpkg/types": "4.0.0",
+    "prettier": "3.2.5",
+    "typescript": "5.5.0-beta"
+  },
+  "packageManager": "yarn@4.2.2"
+}
