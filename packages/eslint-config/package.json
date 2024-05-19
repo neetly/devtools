@@ -1,0 +1,31 @@
+{
+  "name": "@neetly/eslint-config",
+  "version": "1.0.0-alpha.0",
+  "homepage": "https://github.com/neetly/devtools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neetly/devtools.git",
+    "directory": "packages/eslint-config"
+  },
+  "license": "MIT",
+  "exports": "./lib/index.js",
+  "files": [
+    "./lib"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "build:clean": "tsc --build --clean",
+    "prepack": "run build:clean && run build && cp ../../LICENSE ./"
+  },
+  "dependencies": {
+    "@neetly/eslint-plugin": "workspace:*"
+  },
+  "peerDependencies": {
+    "eslint": "*"
+  },
+  "devDependencies": {
+    "@neetly/tsconfig": "workspace:*",
+    "eslint": "9.2.0",
+    "typescript": "5.5.0-beta"
+  }
+}
