@@ -8,6 +8,7 @@
     "directory": "packages/tsconfig"
   },
   "license": "MIT",
+  "type": "module",
   "exports": {
     ".": "./src/tsconfig.json",
     "./base": "./src/base/tsconfig.json"

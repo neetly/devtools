@@ -8,6 +8,7 @@
     "directory": "packages/eslint-plugin"
   },
   "license": "MIT",
+  "type": "module",
   "exports": "./lib/index.js",
   "files": [
     "./lib"
