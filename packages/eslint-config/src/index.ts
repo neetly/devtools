@@ -17,20 +17,7 @@ export const createConfig = async ({ rootDir }: { rootDir: string }) => {
     },
 
     {
-      files: ["**/*.{ts,tsx,mts,cts}"],
-      languageOptions: {
-        parserOptions: {
-          projectService: true,
-        },
-      },
-      extends: [
-        eslint.configs.recommended,
-        ...tseslint.configs.strictTypeChecked,
-        ...tseslint.configs.stylisticTypeChecked,
-      ],
-    },
-
-    {
+      extends: [eslint.configs.recommended],
       plugins: {
         "simple-import-sort": eslintPluginSimpleImportSort,
       },
@@ -38,6 +25,19 @@ export const createConfig = async ({ rootDir }: { rootDir: string }) => {
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
       },
+    },
+
+    {
+      files: ["**/*.{ts,tsx,mts,cts}"],
+      languageOptions: {
+        parserOptions: {
+          projectService: true,
+        },
+      },
+      extends: [
+        ...tseslint.configs.strictTypeChecked,
+        ...tseslint.configs.stylisticTypeChecked,
+      ],
     },
   );
 };
