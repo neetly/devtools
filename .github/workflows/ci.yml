@@ -13,6 +13,7 @@ jobs:
       - run: corepack enable
 
       - run: yarn
+      - run: yarn constraints
       - run: yarn dedupe --check
 
       - run: yarn check
