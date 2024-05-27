@@ -1,6 +1,14 @@
 /**
  * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
  */
+exports.recommended = ({ Yarn }) => {
+  exports.enforceProperExports({ Yarn });
+  exports.enforceConsistentDependencies({ Yarn });
+};
+
+/**
+ * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
+ */
 exports.enforceProperExports = ({ Yarn }) => {
   for (const workspace of Yarn.workspaces()) {
     if (!workspace.manifest.private) {

@@ -17,7 +17,6 @@ module.exports = defineConfig({
       }
     }
 
-    constraints.enforceProperExports({ Yarn });
-    constraints.enforceConsistentDependencies({ Yarn });
+    constraints.recommended({ Yarn });
   },
 });
