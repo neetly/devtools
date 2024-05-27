@@ -16,5 +16,6 @@ jobs:
       - run: yarn constraints
       - run: yarn dedupe --check
 
+      - run: yarn workspaces foreach --from @neetly/eslint-config --recursive --topological-dev run build
       - run: yarn check
       - run: yarn build
