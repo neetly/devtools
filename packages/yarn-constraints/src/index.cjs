@@ -1,6 +1,36 @@
 /**
  * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
  */
+exports.enforceProperExports = ({ Yarn }) => {
+  for (const workspace of Yarn.workspaces()) {
+    if (!workspace.manifest.private) {
+      if (!workspace.manifest.exports) {
+        workspace.set("exports", {
+          "./package.json": "./package.json",
+        });
+      } else if (
+        typeof workspace.manifest.exports === "string" ||
+        Object.keys(workspace.manifest.exports).some(
+          (key) => !key.startsWith("."),
+        )
+      ) {
+        workspace.set("exports", {
+          ".": workspace.manifest.exports,
+          "./package.json": "./package.json",
+        });
+      } else {
+        workspace.set("exports", {
+          ...workspace.manifest.exports,
+          "./package.json": "./package.json",
+        });
+      }
+    }
+  }
+};
+
+/**
+ * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
+ */
 exports.enforceConsistentDependencies = ({ Yarn }) => {
   for (const dependency of Yarn.dependencies()) {
     if (Yarn.workspace({ ident: dependency.ident })) {

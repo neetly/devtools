@@ -1,5 +1,5 @@
 const { defineConfig } = require("@yarnpkg/types");
-const { enforceConsistentDependencies } = require("@neetly/yarn-constraints");
+const constraints = require("@neetly/yarn-constraints");
 
 module.exports = defineConfig({
   constraints: async ({ Yarn }) => {
@@ -17,6 +17,7 @@ module.exports = defineConfig({
       }
     }
 
-    enforceConsistentDependencies({ Yarn });
+    constraints.enforceProperExports({ Yarn });
+    constraints.enforceConsistentDependencies({ Yarn });
   },
 });

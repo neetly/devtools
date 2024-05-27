@@ -9,7 +9,10 @@
   },
   "license": "MIT",
   "type": "module",
-  "exports": "./src/tsconfig.json",
+  "exports": {
+    ".": "./src/tsconfig.json",
+    "./package.json": "./package.json"
+  },
   "files": [
     "./src"
   ],
