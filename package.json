@@ -13,6 +13,9 @@
     "publish": "yarn workspaces foreach --all --no-private npm publish --tolerate-republish"
   },
   "devDependencies": {
+    "@babel/cli": "8.0.0-alpha.8",
+    "@babel/core": "8.0.0-alpha.8",
+    "@neetly/babel-preset": "workspace:*",
     "@neetly/yarn-constraints": "workspace:*",
     "@yarnpkg/types": "4.0.0",
     "prettier": "3.2.5",

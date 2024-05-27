@@ -14,8 +14,8 @@
     "./lib"
   ],
   "scripts": {
-    "build": "tsc --build",
-    "build:clean": "tsc --build --clean",
+    "build": "tsc --build && ../../scripts/compile.sh",
+    "build:clean": "tsc --build --clean && rm -rf ./lib",
     "prepack": "run build:clean && run build && cp ../../LICENSE ./"
   },
   "dependencies": {
