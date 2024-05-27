@@ -1492,6 +1492,7 @@ __metadata:
     "@types/eslint__js": "npm:8.42.3"
     "@types/node": "npm:20.12.12"
     eslint: "npm:9.3.0"
+    eslint-plugin-simple-import-sort: "npm:12.1.0"
     typescript: "npm:5.5.0-beta"
     typescript-eslint: "npm:8.0.0-alpha.17"
   peerDependencies:
@@ -2172,6 +2173,15 @@ __metadata:
   version: 4.0.0
   resolution: "escape-string-regexp@npm:4.0.0"
   checksum: 10c0/9497d4dd307d845bd7f75180d8188bb17ea8c151c1edbf6b6717c100e104d629dc2dfb687686181b0f4b7d732c7dfdc4d5e7a8ff72de1b0ca283a75bbb3a9cd9
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-simple-import-sort@npm:12.1.0":
+  version: 12.1.0
+  resolution: "eslint-plugin-simple-import-sort@npm:12.1.0"
+  peerDependencies:
+    eslint: ">=5.0.0"
+  checksum: 10c0/11e963683216e190b09bb6834b6978ca71d438d9413c52495e92493b0a68fc10268d7fd5815814496ab02fe7c018e4d5fd82866bf3ed5f95cff69628ca741102
   languageName: node
   linkType: hard
 
