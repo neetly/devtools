@@ -1510,6 +1510,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@neetly/gitignore@workspace:packages/gitignore":
+  version: 0.0.0-use.local
+  resolution: "@neetly/gitignore@workspace:packages/gitignore"
+  dependencies:
+    "@neetly/tsconfig": "workspace:*"
+    typescript: "npm:5.5.0-beta"
+  languageName: unknown
+  linkType: soft
+
 "@neetly/tsconfig@workspace:*, @neetly/tsconfig@workspace:packages/tsconfig":
   version: 0.0.0-use.local
   resolution: "@neetly/tsconfig@workspace:packages/tsconfig"
