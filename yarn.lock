@@ -1487,8 +1487,10 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:9.3.0"
     "@neetly/eslint-plugin": "workspace:*"
+    "@neetly/gitignore": "workspace:*"
     "@neetly/tsconfig": "workspace:*"
     "@types/eslint__js": "npm:8.42.3"
+    "@types/node": "npm:20.12.12"
     eslint: "npm:9.3.0"
     typescript: "npm:5.5.0-beta"
     typescript-eslint: "npm:8.0.0-alpha.17"
@@ -1510,7 +1512,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@neetly/gitignore@workspace:packages/gitignore":
+"@neetly/gitignore@workspace:*, @neetly/gitignore@workspace:packages/gitignore":
   version: 0.0.0-use.local
   resolution: "@neetly/gitignore@workspace:packages/gitignore"
   dependencies:

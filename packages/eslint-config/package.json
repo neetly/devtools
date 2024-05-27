@@ -21,6 +21,7 @@
   "dependencies": {
     "@eslint/js": "9.3.0",
     "@neetly/eslint-plugin": "workspace:*",
+    "@neetly/gitignore": "workspace:*",
     "@types/eslint__js": "8.42.3",
     "typescript-eslint": "8.0.0-alpha.17"
   },
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@neetly/tsconfig": "workspace:*",
+    "@types/node": "20.12.12",
     "eslint": "9.3.0",
     "typescript": "5.5.0-beta"
   }
