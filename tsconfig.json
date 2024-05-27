@@ -1,5 +1,0 @@
-{
-  "extends": "@neetly/tsconfig/base",
-
-  "references": []
-}
