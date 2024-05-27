@@ -1,10 +1,28 @@
 {
-  "extends": "@neetly/tsconfig/base",
-
   "include": ["${configDir}/src"],
 
   "compilerOptions": {
     "rootDir": "${configDir}/src",
-    "outDir": "${configDir}/lib"
+    "outDir": "${configDir}/lib",
+
+    "composite": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+
+    "target": "esnext",
+    "jsx": "preserve",
+
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    "module": "nodenext",
+    "moduleDetection": "force",
+    "verbatimModuleSyntax": true,
+
+    "lib": ["esnext"],
+    "types": [],
+    "skipLibCheck": true
   }
 }
