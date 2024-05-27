@@ -5,7 +5,7 @@ export default tseslint.config({
   files: ["**/*.{ts,tsx,mts,cts}"],
   languageOptions: {
     parserOptions: {
-      EXPERIMENTAL_useProjectService: true,
+      projectService: true,
     },
   },
   extends: [
