@@ -22,6 +22,14 @@
     "build:clean": "tsc --build --clean",
     "prepack": "run build:clean && run build && cp ../../LICENSE ./"
   },
+  "peerDependencies": {
+    "@yarnpkg/types": "*"
+  },
+  "peerDependenciesMeta": {
+    "@yarnpkg/types": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@neetly/tsconfig": "workspace:*",
     "@types/node": "20.12.12",

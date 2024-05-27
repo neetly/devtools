@@ -1481,6 +1481,11 @@ __metadata:
     "@types/node": "npm:20.12.12"
     "@yarnpkg/types": "npm:4.0.0"
     typescript: "npm:5.5.0-beta"
+  peerDependencies:
+    "@yarnpkg/types": "*"
+  peerDependenciesMeta:
+    "@yarnpkg/types":
+      optional: true
   languageName: unknown
   linkType: soft
 
