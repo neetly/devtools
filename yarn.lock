@@ -1458,7 +1458,7 @@ __metadata:
     "@babel/preset-typescript": "npm:8.0.0-alpha.8"
     "@neetly/tsconfig": "workspace:*"
     "@types/node": "npm:20.12.12"
-    typescript: "npm:5.5.0-beta"
+    typescript: "npm:5.5.0-dev.20240528"
   peerDependencies:
     "@babel/core": "*"
   languageName: unknown
@@ -1477,7 +1477,7 @@ __metadata:
     "@yarnpkg/types": "npm:4.0.0"
     eslint: "npm:9.3.0"
     prettier: "npm:3.2.5"
-    typescript: "npm:5.5.0-beta"
+    typescript: "npm:5.5.0-dev.20240528"
   languageName: unknown
   linkType: soft
 
@@ -1493,7 +1493,7 @@ __metadata:
     "@types/node": "npm:20.12.12"
     eslint: "npm:9.3.0"
     eslint-plugin-simple-import-sort: "npm:12.1.0"
-    typescript: "npm:5.5.0-beta"
+    typescript: "npm:5.5.0-dev.20240528"
     typescript-eslint: "npm:8.0.0-alpha.20"
   peerDependencies:
     eslint: "*"
@@ -1507,7 +1507,7 @@ __metadata:
   dependencies:
     "@neetly/tsconfig": "workspace:*"
     eslint: "npm:9.3.0"
-    typescript: "npm:5.5.0-beta"
+    typescript: "npm:5.5.0-dev.20240528"
   peerDependencies:
     eslint: "*"
   languageName: unknown
@@ -1518,7 +1518,7 @@ __metadata:
   resolution: "@neetly/gitignore@workspace:packages/gitignore"
   dependencies:
     "@neetly/tsconfig": "workspace:*"
-    typescript: "npm:5.5.0-beta"
+    typescript: "npm:5.5.0-dev.20240528"
   languageName: unknown
   linkType: soft
 
@@ -1526,7 +1526,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@neetly/tsconfig@workspace:packages/tsconfig"
   dependencies:
-    typescript: "npm:5.5.0-beta"
+    typescript: "npm:5.5.0-dev.20240528"
   peerDependencies:
     typescript: "*"
   languageName: unknown
@@ -1539,7 +1539,7 @@ __metadata:
     "@neetly/tsconfig": "workspace:*"
     "@types/node": "npm:20.12.12"
     "@yarnpkg/types": "npm:4.0.0"
-    typescript: "npm:5.5.0-beta"
+    typescript: "npm:5.5.0-dev.20240528"
   peerDependencies:
     "@yarnpkg/types": "*"
   peerDependenciesMeta:
@@ -3654,23 +3654,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.5.0-beta":
-  version: 5.5.0-beta
-  resolution: "typescript@npm:5.5.0-beta"
+"typescript@npm:5.5.0-dev.20240528":
+  version: 5.5.0-dev.20240528
+  resolution: "typescript@npm:5.5.0-dev.20240528"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/e4b029678d6e77514355a79bb2b30e80784712b58cdb1391e07d2282aefceaff7850edf16814f6b4b9d4f23c84372afdfc6165cb628adc5303274fff8a795ce5
+  checksum: 10c0/38303b7e4609896cdfd1c7f7e033ef5ca4ecb0433979503ac11cf7d02b7dca612439dabd031586821ae609c1aef9037b451e26e86ac7738cbd430fe3f2765982
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.5.0-beta#optional!builtin<compat/typescript>":
-  version: 5.5.0-beta
-  resolution: "typescript@patch:typescript@npm%3A5.5.0-beta#optional!builtin<compat/typescript>::version=5.5.0-beta&hash=b45daf"
+"typescript@patch:typescript@npm%3A5.5.0-dev.20240528#optional!builtin<compat/typescript>":
+  version: 5.5.0-dev.20240528
+  resolution: "typescript@patch:typescript@npm%3A5.5.0-dev.20240528#optional!builtin<compat/typescript>::version=5.5.0-dev.20240528&hash=b45daf"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/665f9f8140409b79ee61a695627842d49430ce944571b44c3fe81c05a0359041f2aa267e5e5639dfdb844da47c7a542f7a534fe301533c846a20c63cd9ff1d53
+  checksum: 10c0/d72bc67c8455bc9d74c3190425861b1e40ccc88557ad8b7dec095e57cadcb718668bb47f646874bebb5c9ea3a02284449808df17b651fe2d7652d2390e88a894
   languageName: node
   linkType: hard
 
