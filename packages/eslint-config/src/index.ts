@@ -22,6 +22,11 @@ export const createConfig = async ({ rootDir }: { rootDir: string }) => {
         "simple-import-sort": eslintPluginSimpleImportSort,
       },
       rules: {
+        eqeqeq: "error",
+        "object-shorthand": "error",
+        "no-useless-rename": "error",
+
+        // imports & exports
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
       },
@@ -29,15 +34,30 @@ export const createConfig = async ({ rootDir }: { rootDir: string }) => {
 
     {
       files: ["**/*.{ts,tsx,mts,cts}"],
+      extends: [
+        ...tseslint.configs.strictTypeChecked,
+        ...tseslint.configs.stylisticTypeChecked,
+      ],
       languageOptions: {
         parserOptions: {
           projectService: true,
         },
       },
-      extends: [
-        ...tseslint.configs.strictTypeChecked,
-        ...tseslint.configs.stylisticTypeChecked,
-      ],
+      rules: {
+        // promises
+        "@typescript-eslint/promise-function-async": "error",
+
+        // imports & exports
+        "@typescript-eslint/consistent-type-imports": [
+          "error",
+          { fixStyle: "inline-type-imports" },
+        ],
+        "@typescript-eslint/consistent-type-exports": [
+          "error",
+          { fixMixedExportsWithInlineTypeSpecifier: true },
+        ],
+        "@typescript-eslint/no-import-type-side-effects": "error",
+      },
     },
   );
 };
