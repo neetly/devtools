@@ -20,7 +20,7 @@
     "@neetly/tsconfig": "workspace:*",
     "@neetly/yarn-constraints": "workspace:*",
     "@yarnpkg/types": "4.0.0",
-    "eslint": "9.3.0",
+    "eslint": "9.4.0",
     "prettier": "3.2.5",
     "typescript": "5.5.0-beta"
   },
