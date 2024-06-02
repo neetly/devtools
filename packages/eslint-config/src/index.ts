@@ -39,13 +39,6 @@ export const createConfig = async ({ rootDir }: { rootDir: string }) => {
     },
 
     {
-      files: ["**/*.cjs"],
-      rules: {
-        "@typescript-eslint/no-require-imports": "off",
-      },
-    },
-
-    {
       files: ["**/*.{ts,tsx,mts,cts}"],
       extends: [
         ...tseslint.configs.strictTypeChecked,
@@ -70,6 +63,13 @@ export const createConfig = async ({ rootDir }: { rootDir: string }) => {
           { fixMixedExportsWithInlineTypeSpecifier: true },
         ],
         "@typescript-eslint/no-import-type-side-effects": "error",
+      },
+    },
+
+    {
+      files: ["**/*.{cjs,cts}"],
+      rules: {
+        "@typescript-eslint/no-require-imports": "off",
       },
     },
 
