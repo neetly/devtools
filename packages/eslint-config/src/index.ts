@@ -4,6 +4,7 @@ import path from "node:path";
 import eslint from "@eslint/js";
 import * as gitignore from "@neetly/gitignore";
 import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import tseslint from "typescript-eslint";
 
 export const createConfig = async ({ rootDir }: { rootDir: string }) => {
@@ -57,6 +58,17 @@ export const createConfig = async ({ rootDir }: { rootDir: string }) => {
           { fixMixedExportsWithInlineTypeSpecifier: true },
         ],
         "@typescript-eslint/no-import-type-side-effects": "error",
+      },
+    },
+
+    // Node.js
+    {
+      plugins: {
+        unicorn: eslintPluginUnicorn,
+      },
+      rules: {
+        "unicorn/prefer-node-protocol": "error",
+        "unicorn/text-encoding-identifier-case": "error",
       },
     },
   );
