@@ -1494,7 +1494,6 @@ __metadata:
     "@babel/core": "npm:8.0.0-alpha.8"
     "@neetly/babel-preset": "workspace:*"
     "@neetly/eslint-config": "workspace:*"
-    "@neetly/tsconfig": "workspace:*"
     "@neetly/yarn-constraints": "workspace:*"
     "@yarnpkg/types": "npm:4.0.0"
     eslint: "npm:9.4.0"

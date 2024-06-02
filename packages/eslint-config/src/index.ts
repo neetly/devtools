@@ -34,6 +34,18 @@ export const createConfig = async ({ rootDir }: { rootDir: string }) => {
     },
 
     {
+      files: ["**/*.{js,mjs,cjs}"],
+      extends: [...tseslint.configs.strict, ...tseslint.configs.stylistic],
+    },
+
+    {
+      files: ["**/*.cjs"],
+      rules: {
+        "@typescript-eslint/no-require-imports": "off",
+      },
+    },
+
+    {
       files: ["**/*.{ts,tsx,mts,cts}"],
       extends: [
         ...tseslint.configs.strictTypeChecked,
