@@ -85,14 +85,20 @@ exports.enforceConsistentDependencies = ({ Yarn }) => {
   }
 
   for (const dependency of Yarn.dependencies({ type: "peerDependencies" })) {
-    const otherDependency = Yarn.dependency({
-      workspace: dependency.workspace,
-      ident: dependency.ident,
-      type: "devDependencies",
-    });
+    const otherDependency =
+      Yarn.dependency({
+        workspace: dependency.workspace,
+        ident: dependency.ident,
+        type: "dependencies",
+      }) ??
+      Yarn.dependency({
+        workspace: dependency.workspace,
+        ident: dependency.ident,
+        type: "devDependencies",
+      });
     if (!otherDependency) {
       dependency.error(
-        `yarn workspace ${dependency.workspace.ident} add --dev --exact ${dependency.ident}`,
+        `yarn workspace ${dependency.workspace.ident} add [--dev] --exact ${dependency.ident}`,
       );
     }
   }
