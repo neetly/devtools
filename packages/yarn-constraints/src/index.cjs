@@ -62,13 +62,16 @@ exports.enforceConsistentDependencies = ({ Yarn }) => {
   }
 
   for (const dependency of Yarn.dependencies()) {
-    if (dependency.type !== "peerDependencies") {
-      for (const otherDependency of Yarn.dependencies({
-        ident: dependency.ident,
-      })) {
-        if (otherDependency.type !== "peerDependencies") {
-          dependency.update(otherDependency.range);
-        }
+    for (const otherDependency of Yarn.dependencies({
+      ident: dependency.ident,
+    })) {
+      if (
+        (dependency.type !== "peerDependencies" &&
+          otherDependency.type !== "peerDependencies") ||
+        (dependency.type === "peerDependencies" &&
+          otherDependency.type === "peerDependencies")
+      ) {
+        otherDependency.update(dependency.range);
       }
     }
   }
