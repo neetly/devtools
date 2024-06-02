@@ -1511,6 +1511,7 @@ __metadata:
     "@neetly/eslint-plugin": "workspace:*"
     "@neetly/gitignore": "workspace:*"
     "@neetly/tsconfig": "workspace:*"
+    "@types/eslint": "npm:8.56.10"
     "@types/eslint__js": "npm:8.42.3"
     "@types/node": "npm:20.13.0"
     eslint: "npm:9.4.0"
@@ -1519,6 +1520,7 @@ __metadata:
     typescript: "npm:5.5.0-beta"
     typescript-eslint: "npm:8.0.0-alpha.24"
   peerDependencies:
+    "@types/eslint": "*"
     eslint: "*"
     typescript: "*"
   languageName: unknown
@@ -1565,9 +1567,6 @@ __metadata:
     typescript: "npm:5.5.0-beta"
   peerDependencies:
     "@yarnpkg/types": "*"
-  peerDependenciesMeta:
-    "@yarnpkg/types":
-      optional: true
   languageName: unknown
   linkType: soft
 
@@ -1627,7 +1626,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:*":
+"@types/eslint@npm:*, @types/eslint@npm:8.56.10":
   version: 8.56.10
   resolution: "@types/eslint@npm:8.56.10"
   dependencies:

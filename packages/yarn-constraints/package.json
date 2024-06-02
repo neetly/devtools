@@ -25,18 +25,15 @@
     "build:clean": "tsc --build --clean",
     "prepack": "run build:clean && run build && cp ../../LICENSE ./"
   },
+  "dependencies": {
+    "@yarnpkg/types": "4.0.0"
+  },
   "peerDependencies": {
     "@yarnpkg/types": "*"
-  },
-  "peerDependenciesMeta": {
-    "@yarnpkg/types": {
-      "optional": true
-    }
   },
   "devDependencies": {
     "@neetly/tsconfig": "workspace:*",
     "@types/node": "20.13.0",
-    "@yarnpkg/types": "4.0.0",
     "typescript": "5.5.0-beta"
   }
 }
