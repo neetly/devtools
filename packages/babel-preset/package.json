@@ -26,16 +26,16 @@
     "prepack": "run build:clean && run build && cp ../../LICENSE ./"
   },
   "dependencies": {
-    "@babel/helper-plugin-utils": "8.0.0-alpha.8",
-    "@babel/preset-env": "8.0.0-alpha.8",
-    "@babel/preset-react": "8.0.0-alpha.8",
-    "@babel/preset-typescript": "8.0.0-alpha.8"
+    "@babel/helper-plugin-utils": "8.0.0-alpha.10",
+    "@babel/preset-env": "8.0.0-alpha.10",
+    "@babel/preset-react": "8.0.0-alpha.10",
+    "@babel/preset-typescript": "8.0.0-alpha.10"
   },
   "peerDependencies": {
     "@babel/core": "*"
   },
   "devDependencies": {
-    "@babel/core": "8.0.0-alpha.8",
+    "@babel/core": "8.0.0-alpha.10",
     "@neetly/tsconfig": "workspace:*",
     "@types/node": "20.14.0",
     "typescript": "5.5.0-beta"
