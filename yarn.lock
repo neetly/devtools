@@ -1348,7 +1348,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint-community/eslint-utils@npm:^4.2.0, @eslint-community/eslint-utils@npm:^4.4.0":
+"@eslint-community/eslint-utils@npm:4.4.0, @eslint-community/eslint-utils@npm:^4.2.0, @eslint-community/eslint-utils@npm:^4.4.0":
   version: 4.4.0
   resolution: "@eslint-community/eslint-utils@npm:4.4.0"
   dependencies:
@@ -1478,6 +1478,232 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@neetly-eslint-react/ast@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/ast@npm:0.0.0-dev.0"
+  dependencies:
+    "@eslint-community/eslint-utils": "npm:4.4.0"
+    "@neetly-eslint-react/tools": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/types": "npm:0.0.0-dev.0"
+    "@typescript-eslint/scope-manager": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/types": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.26"
+    string-ts: "npm:2.1.1"
+    ts-pattern: "npm:5.1.2"
+  checksum: 10c0/9a0075964d3b4df87702b8c57a7b0c13c6c490fc3ddf86d225ec77ec9281b90948662cce0c53df5867e09885ce231fc437969ee3eab3c580d7dc5f23d411ddc5
+  languageName: node
+  linkType: hard
+
+"@neetly-eslint-react/core@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/core@npm:0.0.0-dev.0"
+  dependencies:
+    "@neetly-eslint-react/ast": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/jsx": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/shared": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/tools": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/types": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/var": "npm:0.0.0-dev.0"
+    "@typescript-eslint/scope-manager": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/type-utils": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/types": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.26"
+    short-unique-id: "npm:5.2.0"
+    ts-pattern: "npm:5.1.2"
+    valibot: "npm:0.31.0-rc.10"
+  checksum: 10c0/c20f108c255a0b1f3ab017929a7fa58df3a875033f12cedcb27125fef3560b572ba4b9c33126829dd4437b86a44966a4ffc35398e41043523125f6eb7a270589
+  languageName: node
+  linkType: hard
+
+"@neetly-eslint-react/eslint-plugin-react-core@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/eslint-plugin-react-core@npm:0.0.0-dev.0"
+  dependencies:
+    "@neetly-eslint-react/ast": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/core": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/jsx": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/shared": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/tools": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/types": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/var": "npm:0.0.0-dev.0"
+    "@typescript-eslint/parser": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/scope-manager": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/type-utils": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/types": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.26"
+    string-ts: "npm:2.1.1"
+    ts-api-utils: "npm:1.3.0"
+    valibot: "npm:0.31.0-rc.10"
+  peerDependencies:
+    "@typescript-eslint/parser": ^7.5.0 || ^8.0.0-0
+    eslint: ^8.57.0 || ^9.0.0
+    typescript: ^5.3.3
+  checksum: 10c0/8c6c674d9661c6e4c523088001916507d6d6851d63077856f2ab613d62cf841c2838ed11e01bb987c85b0431982fdadb362b54f718a6b8f580c1f7f3b3e34788
+  languageName: node
+  linkType: hard
+
+"@neetly-eslint-react/eslint-plugin-react-dom@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/eslint-plugin-react-dom@npm:0.0.0-dev.0"
+  dependencies:
+    "@neetly-eslint-react/ast": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/core": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/jsx": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/shared": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/tools": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/types": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/var": "npm:0.0.0-dev.0"
+    "@typescript-eslint/parser": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/scope-manager": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/types": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.26"
+    string-ts: "npm:2.1.1"
+    valibot: "npm:0.31.0-rc.10"
+  peerDependencies:
+    "@typescript-eslint/parser": ^7.5.0 || ^8.0.0-0
+    eslint: ^8.57.0 || ^9.0.0
+    typescript: ^5.3.3
+  checksum: 10c0/12de21d8d0e93c9c885bc19e22278539b76cebdce61c8bcc875455b64103a38a474a8e895537f47c8b5ee029b7a40e160ba05cd6f21ded20c0a642e93490db09
+  languageName: node
+  linkType: hard
+
+"@neetly-eslint-react/eslint-plugin-react-hooks-extra@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/eslint-plugin-react-hooks-extra@npm:0.0.0-dev.0"
+  dependencies:
+    "@neetly-eslint-react/ast": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/core": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/jsx": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/shared": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/tools": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/types": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/var": "npm:0.0.0-dev.0"
+    "@typescript-eslint/parser": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/scope-manager": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/type-utils": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/types": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.26"
+    string-ts: "npm:2.1.1"
+    valibot: "npm:0.31.0-rc.10"
+  peerDependencies:
+    "@typescript-eslint/parser": ^7.5.0 || ^8.0.0-0
+    eslint: ^8.57.0 || ^9.0.0
+    typescript: ^5.3.3
+  checksum: 10c0/2f308f79563ab21a47b21035a6b9345c27f7a1cb53221d6e5372f3173cc0454aad9242acfa24067e355706ab76fc05fb28566fa49b7f6ac86596241e12c7631f
+  languageName: node
+  linkType: hard
+
+"@neetly-eslint-react/eslint-plugin-react-naming-convention@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/eslint-plugin-react-naming-convention@npm:0.0.0-dev.0"
+  dependencies:
+    "@neetly-eslint-react/ast": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/core": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/jsx": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/shared": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/tools": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/types": "npm:0.0.0-dev.0"
+    "@typescript-eslint/parser": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/scope-manager": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/type-utils": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/types": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.26"
+    string-ts: "npm:2.1.1"
+    valibot: "npm:0.31.0-rc.10"
+  peerDependencies:
+    "@typescript-eslint/parser": ^7.5.0 || ^8.0.0-0
+    eslint: ^8.57.0 || ^9.0.0
+    typescript: ^5.3.3
+  checksum: 10c0/ee734740a0dd2a2010c94ce9bff72bcbf6dd3ab785976a583a7f35b546c1364b4d6c10c32b08de796ea50dd9d51d079fd83123ed7815c36532bbccec25684b9c
+  languageName: node
+  linkType: hard
+
+"@neetly-eslint-react/eslint-plugin@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/eslint-plugin@npm:0.0.0-dev.0"
+  dependencies:
+    "@neetly-eslint-react/eslint-plugin-react-core": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/eslint-plugin-react-dom": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/eslint-plugin-react-hooks-extra": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/eslint-plugin-react-naming-convention": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/shared": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/tools": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/types": "npm:0.0.0-dev.0"
+    "@typescript-eslint/parser": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/scope-manager": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/type-utils": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/types": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.26"
+  peerDependencies:
+    "@typescript-eslint/parser": ^7.5.0 || ^8.0.0-0
+    eslint: ^8.57.0 || ^9.0.0
+    typescript: ^5.3.3
+  checksum: 10c0/b411ca8eaddc80777fa8cc953ab56620c19f21a7f7add2e938b8133dca65d3e89cbd950d62ebfbc78ce724d27959fb1facda87a7357c91dd23d57b06eb7fd4b9
+  languageName: node
+  linkType: hard
+
+"@neetly-eslint-react/jsx@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/jsx@npm:0.0.0-dev.0"
+  dependencies:
+    "@neetly-eslint-react/ast": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/shared": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/tools": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/types": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/var": "npm:0.0.0-dev.0"
+    "@typescript-eslint/scope-manager": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/types": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.26"
+    micro-memoize: "npm:4.1.2"
+    ts-pattern: "npm:5.1.2"
+  checksum: 10c0/88cfeedd94474c4e48cf7f98fb417f4f9eabc94ec5bceb362117d948df501b1476a6325c898f95136a090f2758a556d108154a20156792ca6645cf1a20c41cbd
+  languageName: node
+  linkType: hard
+
+"@neetly-eslint-react/shared@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/shared@npm:0.0.0-dev.0"
+  dependencies:
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.26"
+    deepmerge-ts: "npm:7.0.2"
+  checksum: 10c0/5e8a4a68de8d5fe3357b480414d2046db56c0b83572cb80142d062a222a3fb22833f1a07da1d80d833cabb4a5304b298a25a3cccbc8105e967b895a26f0a36fb
+  languageName: node
+  linkType: hard
+
+"@neetly-eslint-react/tools@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/tools@npm:0.0.0-dev.0"
+  checksum: 10c0/d8e24c9d7ae446593380c804259da19cd6ec7d905c3db2d4d5d061a70fa260606e7d472191e5759e05b12e45be840030713ca581a7ea29fd8f0973d112ea2279
+  languageName: node
+  linkType: hard
+
+"@neetly-eslint-react/types@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/types@npm:0.0.0-dev.0"
+  dependencies:
+    "@neetly-eslint-react/tools": "npm:0.0.0-dev.0"
+    "@typescript-eslint/types": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.26"
+  checksum: 10c0/471ca42e695dfd6eeba19e058b978dfc0667d23ddcce8f1c9a1103bf27343bd27bc3b7778363cb7862c23150d02e8b66dac543fa71c0ca7b26edeb48bbd25e91
+  languageName: node
+  linkType: hard
+
+"@neetly-eslint-react/var@npm:0.0.0-dev.0":
+  version: 0.0.0-dev.0
+  resolution: "@neetly-eslint-react/var@npm:0.0.0-dev.0"
+  dependencies:
+    "@neetly-eslint-react/ast": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/tools": "npm:0.0.0-dev.0"
+    "@neetly-eslint-react/types": "npm:0.0.0-dev.0"
+    "@typescript-eslint/scope-manager": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/types": "npm:8.0.0-alpha.26"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.26"
+    string-ts: "npm:2.1.1"
+    valibot: "npm:0.31.0-rc.10"
+  checksum: 10c0/3693899c673fcf053f9b6176e35a662da7024592d5c3434eea6ef657ab765167a18863c606f48beab5d5335ec170e2f2786b5be5c75bb774c1ee524c8f239d55
+  languageName: node
+  linkType: hard
+
 "@neetly/babel-preset@workspace:*, @neetly/babel-preset@workspace:packages/babel-preset":
   version: 0.0.0-use.local
   resolution: "@neetly/babel-preset@workspace:packages/babel-preset"
@@ -1516,6 +1742,7 @@ __metadata:
   resolution: "@neetly/eslint-config@workspace:packages/eslint-config"
   dependencies:
     "@eslint/js": "npm:9.4.0"
+    "@neetly-eslint-react/eslint-plugin": "npm:0.0.0-dev.0"
     "@neetly/eslint-plugin": "workspace:*"
     "@neetly/gitignore": "workspace:*"
     "@neetly/tsconfig": "workspace:*"
@@ -2196,6 +2423,13 @@ __metadata:
   version: 0.1.4
   resolution: "deep-is@npm:0.1.4"
   checksum: 10c0/7f0ee496e0dff14a573dc6127f14c95061b448b87b995fc96c017ce0a1e66af1675e73f1d6064407975bc4ea6ab679497a29fff7b5b9c4e99cb10797c1ad0b4c
+  languageName: node
+  linkType: hard
+
+"deepmerge-ts@npm:7.0.2":
+  version: 7.0.2
+  resolution: "deepmerge-ts@npm:7.0.2"
+  checksum: 10c0/47a8c4e69dc3126e18831f73341f9412e25b68d35654ecce57a3314db7a26bab7d12fbd59795f06c9611ccffae5656d427b14e500af8deae1acc0027e540d5e7
   languageName: node
   linkType: hard
 
@@ -3101,6 +3335,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"micro-memoize@npm:4.1.2":
+  version: 4.1.2
+  resolution: "micro-memoize@npm:4.1.2"
+  checksum: 10c0/4b52dc1aa1c4b533f4008f6181f1e640e1bd1d4826881672b4f60f07ab6acc1deea073413e0488d589308e862abf6f03d1dcf7018bf08e751690268a462de4d3
+  languageName: node
+  linkType: hard
+
 "micromatch@npm:^4.0.4":
   version: 4.0.7
   resolution: "micromatch@npm:4.0.7"
@@ -3722,6 +3963,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"short-unique-id@npm:5.2.0":
+  version: 5.2.0
+  resolution: "short-unique-id@npm:5.2.0"
+  bin:
+    short-unique-id: bin/short-unique-id
+    suid: bin/short-unique-id
+  checksum: 10c0/fb5f2d11bf38c3a2de629caaa55de858b4e1c0b02399b9c42afa1ef05e5203ae6e3ab5b11449b56c68d04d74f76515a778780afd7d16742b340d77d2967498f1
+  languageName: node
+  linkType: hard
+
 "signal-exit@npm:^4.0.1":
   version: 4.1.0
   resolution: "signal-exit@npm:4.1.0"
@@ -3811,6 +4062,13 @@ __metadata:
   dependencies:
     minipass: "npm:^7.0.3"
   checksum: 10c0/e5a1e23a4057a86a97971465418f22ea89bd439ac36ade88812dd920e4e61873e8abd6a9b72a03a67ef50faa00a2daf1ab745c5a15b46d03e0544a0296354227
+  languageName: node
+  linkType: hard
+
+"string-ts@npm:2.1.1":
+  version: 2.1.1
+  resolution: "string-ts@npm:2.1.1"
+  checksum: 10c0/5317254fb85ee4c67155b870030bd9666d3b1199b3593f0363cca0dbcc85152bb43f120e3dd3f44843170f50dbc64b4d742cc5ba18ef7fedf72f646f9c4e6e7a
   languageName: node
   linkType: hard
 
@@ -3939,12 +4197,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-api-utils@npm:^1.3.0":
+"ts-api-utils@npm:1.3.0, ts-api-utils@npm:^1.3.0":
   version: 1.3.0
   resolution: "ts-api-utils@npm:1.3.0"
   peerDependencies:
     typescript: ">=4.2.0"
   checksum: 10c0/f54a0ba9ed56ce66baea90a3fa087a484002e807f28a8ccb2d070c75e76bde64bd0f6dce98b3802834156306050871b67eec325cb4e918015a360a3f0868c77c
+  languageName: node
+  linkType: hard
+
+"ts-pattern@npm:5.1.2":
+  version: 5.1.2
+  resolution: "ts-pattern@npm:5.1.2"
+  checksum: 10c0/df6e70ebde9eb0aaf1966afd4e135995ff38830b3c4f720e47c10a4d78618ec33bbcc6d55e0d0c4648e2e01408ca3f9bceba34ec7b1ed7a7324a7735e925634b
   languageName: node
   linkType: hard
 
@@ -4095,6 +4360,13 @@ __metadata:
   dependencies:
     punycode: "npm:^2.1.0"
   checksum: 10c0/4ef57b45aa820d7ac6496e9208559986c665e49447cb072744c13b66925a362d96dd5a46c4530a6b8e203e5db5fe849369444440cb22ecfc26c679359e5dfa3c
+  languageName: node
+  linkType: hard
+
+"valibot@npm:0.31.0-rc.10":
+  version: 0.31.0-rc.10
+  resolution: "valibot@npm:0.31.0-rc.10"
+  checksum: 10c0/d73472db25e571dd91dda91e5fcf525a2cc86cd0feb31e37bc3f00f052e98a59d6bef148e8c672a49f7ecfa99010079a1e452410ebc0f86adaf091b63871570d
   languageName: node
   linkType: hard
 
