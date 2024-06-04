@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "preserve",
+
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    "module": "nodenext",
+    "moduleDetection": "force",
+    "verbatimModuleSyntax": true,
+
+    "lib": ["esnext"],
+    "types": [],
+    "skipLibCheck": true
+  }
+}

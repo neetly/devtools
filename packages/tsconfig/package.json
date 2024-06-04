@@ -11,6 +11,7 @@
   "type": "module",
   "exports": {
     ".": "./src/tsconfig.json",
+    "./base": "./src/base/tsconfig.json",
     "./package.json": "./package.json"
   },
   "files": [
