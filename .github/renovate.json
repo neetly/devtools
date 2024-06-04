@@ -1,3 +1,13 @@
 {
-  "extends": ["github>neetly/renovate-config"]
+  "extends": ["github>neetly/renovate-config"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "!/-dev\\./"
+    },
+    {
+      "matchPackageNames": ["eslint-plugin-react-hooks"],
+      "allowedVersions": "!/-rc-/"
+    }
+  ]
 }
