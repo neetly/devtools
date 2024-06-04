@@ -3,7 +3,6 @@ import path from "node:path";
 
 import eslint from "@eslint/js";
 import * as gitignore from "@neetly/gitignore";
-import type { ESLint } from "eslint";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
