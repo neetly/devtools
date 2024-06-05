@@ -1,4 +1,4 @@
-export const parse = (content: string) => {
+export const parse = (content: string): { patterns: readonly string[] } => {
   const patterns = content
     .split("\n")
 

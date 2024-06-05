@@ -1,25 +1,21 @@
-import eslintPluginReact from "@neetly-eslint-react/eslint-plugin";
-import eslintPluginReactHooks from "eslint-plugin-react-hooks";
+import eslintPluginReact from "@eslint-react/eslint-plugin";
+import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 import tseslint from "typescript-eslint";
 
-export default tseslint.config(
-  {
-    files: ["**/*.{js,mjs,cjs}"],
-    extends: [eslintPluginReact.configs.recommended],
-  },
+import eslintPluginReactHooks from "../plugins/eslint-plugin-react-hooks.js";
 
-  {
-    files: ["**/*.{ts,tsx,mts,cts}"],
-    extends: [eslintPluginReact.configs["recommended-type-checked"]],
-  },
+export const createReactConfig = (): FlatConfig.ConfigArray => {
+  return tseslint.config(
+    {
+      extends: [
+        eslintPluginReact.configs.recommended,
+        eslintPluginReactHooks.configs.recommended,
+      ],
+    },
 
-  {
-    plugins: {
-      "react-hooks": eslintPluginReactHooks,
+    {
+      files: ["**/*.{ts,tsx,mts,cts}"],
+      extends: [eslintPluginReact.configs["recommended-type-checked"]],
     },
-    rules: {
-      // FIXME: https://github.com/facebook/react/issues/28313
-      ...eslintPluginReactHooks.configs.recommended.rules,
-    },
-  },
-);
+  );
+};
