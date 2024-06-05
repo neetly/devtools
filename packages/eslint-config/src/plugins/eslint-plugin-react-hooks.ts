@@ -1,15 +1,16 @@
-import type { ESLint, Linter } from "eslint";
+import type { Linter } from "eslint";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 
-// FIXME: https://github.com/facebook/react/issues/28313
-const plugin: ESLint.Plugin & {
+// FIXME: https://github.com/facebook/react/pull/29770
+const plugin: typeof eslintPluginReactHooks & {
   configs: {
-    recommended: Linter.FlatConfig;
+    "flat/recommended": Linter.FlatConfig;
   };
 } = {
   ...eslintPluginReactHooks,
   configs: {
-    recommended: {
+    ...eslintPluginReactHooks.configs,
+    "flat/recommended": {
       plugins: {
         "react-hooks": eslintPluginReactHooks,
       },

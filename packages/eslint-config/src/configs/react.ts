@@ -9,7 +9,7 @@ export const createReactConfig = (): FlatConfig.ConfigArray => {
     {
       extends: [
         eslintPluginReact.configs.recommended,
-        eslintPluginReactHooks.configs.recommended,
+        eslintPluginReactHooks.configs["flat/recommended"],
       ],
     },
 
