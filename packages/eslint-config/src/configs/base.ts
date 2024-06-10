@@ -41,6 +41,7 @@ export const createBaseConfig = (): FlatConfig.ConfigArray => {
 
         // promises
         "@typescript-eslint/promise-function-async": "error",
+        "@typescript-eslint/return-await": ["error", "always"],
 
         // imports & exports
         "@typescript-eslint/consistent-type-imports": [
