@@ -28,11 +28,11 @@
     "@neetly/gitignore": "workspace:*",
     "@types/eslint": "8.56.10",
     "@types/eslint__js": "8.42.3",
-    "@typescript-eslint/utils": "8.0.0-alpha.29",
+    "@typescript-eslint/utils": "8.0.0-alpha.30",
     "eslint-plugin-react-hooks": "5.1.0-rc.0",
     "eslint-plugin-simple-import-sort": "12.1.0",
     "eslint-plugin-unicorn": "53.0.0",
-    "typescript-eslint": "8.0.0-alpha.29"
+    "typescript-eslint": "8.0.0-alpha.30"
   },
   "peerDependencies": {
     "@types/eslint": "*",
