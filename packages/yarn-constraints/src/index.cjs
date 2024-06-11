@@ -1,15 +1,15 @@
 /**
  * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
  */
-export const recommended = ({ Yarn }) => {
-  enforceProperExports({ Yarn });
-  enforceConsistentDependencies({ Yarn });
+exports.recommended = ({ Yarn }) => {
+  exports.enforceProperExports({ Yarn });
+  exports.enforceConsistentDependencies({ Yarn });
 };
 
 /**
  * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
  */
-export const enforceProperExports = ({ Yarn }) => {
+exports.enforceProperExports = ({ Yarn }) => {
   for (const workspace of Yarn.workspaces()) {
     if (!workspace.manifest.private) {
       if (!workspace.manifest.exports) {
@@ -39,7 +39,7 @@ export const enforceProperExports = ({ Yarn }) => {
 /**
  * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
  */
-export const enforceConsistentDependencies = ({ Yarn }) => {
+exports.enforceConsistentDependencies = ({ Yarn }) => {
   for (const dependency of Yarn.dependencies()) {
     if (Yarn.workspace({ ident: dependency.ident })) {
       if (dependency.type !== "peerDependencies") {

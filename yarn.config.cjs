@@ -1,4 +1,5 @@
 const { defineConfig } = require("@yarnpkg/types");
+const constraints = require("@neetly/yarn-constraints");
 
 module.exports = defineConfig({
   constraints: async ({ Yarn }) => {
@@ -16,6 +17,6 @@ module.exports = defineConfig({
       }
     }
 
-    (await import("@neetly/yarn-constraints")).recommended({ Yarn });
+    constraints.recommended({ Yarn });
   },
 });
