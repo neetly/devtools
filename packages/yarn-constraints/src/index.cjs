@@ -2,8 +2,18 @@
  * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
  */
 exports.recommended = ({ Yarn }) => {
+  exports.enforceTypeModule({ Yarn });
   exports.enforceProperExports({ Yarn });
   exports.enforceConsistentDependencies({ Yarn });
+};
+
+/**
+ * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
+ */
+exports.enforceTypeModule = ({ Yarn }) => {
+  for (const workspace of Yarn.workspaces()) {
+    workspace.set("type", "module");
+  }
 };
 
 /**
