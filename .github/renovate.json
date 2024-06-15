@@ -4,10 +4,6 @@
     {
       "matchPackageNames": ["typescript"],
       "allowedVersions": "!/-dev\\./"
-    },
-    {
-      "matchPackageNames": ["eslint-plugin-react-hooks"],
-      "allowedVersions": "!/-rc-/"
     }
   ]
 }
