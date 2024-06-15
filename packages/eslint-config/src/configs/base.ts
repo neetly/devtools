@@ -1,5 +1,6 @@
 import eslint from "@eslint/js";
 import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
+import eslintPluginRegexp from "eslint-plugin-regexp";
 import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
 import tseslint from "typescript-eslint";
 
@@ -10,6 +11,7 @@ export const createBaseConfig = (): FlatConfig.ConfigArray => {
         eslint.configs.recommended,
         ...tseslint.configs.strict,
         ...tseslint.configs.stylistic,
+        eslintPluginRegexp.configs["flat/recommended"],
       ],
       plugins: {
         "simple-import-sort": eslintPluginSimpleImportSort,
