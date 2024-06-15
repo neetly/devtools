@@ -1685,6 +1685,7 @@ __metadata:
   dependencies:
     "@neetly/tsconfig": "workspace:*"
     "@types/node": "npm:20.14.9"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.36"
     eslint: "npm:9.6.0"
     typescript: "npm:5.5.2"
   peerDependencies:

@@ -20,6 +20,9 @@
     "build": "tsc --build && ../../scripts/compile.sh",
     "prepack": "nx build && cp ../../LICENSE ./"
   },
+  "dependencies": {
+    "@typescript-eslint/utils": "8.0.0-alpha.36"
+  },
   "peerDependencies": {
     "eslint": "*"
   },
