@@ -14,6 +14,10 @@
       "default": "./src/index.cjs",
       "types": "./lib/index.d.cts"
     },
+    "./config": {
+      "default": "./src/config.cjs",
+      "types": "./lib/config.d.cts"
+    },
     "./package.json": "./package.json"
   },
   "files": [
