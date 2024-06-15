@@ -5,5 +5,5 @@
     "types": ["node"]
   },
 
-  "references": [{ "path": "../gitignore" }]
+  "references": [{ "path": "../gitignore" }, { "path": "../eslint-plugin" }]
 }

@@ -21,6 +21,9 @@
     "build:clean": "tsc --build --clean && rm -rf ./lib",
     "prepack": "run build:clean && run build && cp ../../LICENSE ./"
   },
+  "dependencies": {
+    "@typescript-eslint/utils": "8.0.0-alpha.30"
+  },
   "peerDependencies": {
     "eslint": "*"
   },

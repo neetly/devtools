@@ -1668,6 +1668,7 @@ __metadata:
   resolution: "@neetly/eslint-plugin@workspace:packages/eslint-plugin"
   dependencies:
     "@neetly/tsconfig": "workspace:*"
+    "@typescript-eslint/utils": "npm:8.0.0-alpha.30"
     eslint: "npm:9.5.0"
     typescript: "npm:5.5.0-beta"
   peerDependencies:
