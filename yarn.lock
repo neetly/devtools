@@ -1613,7 +1613,7 @@ __metadata:
     "@babel/preset-react": "npm:8.0.0-alpha.11"
     "@babel/preset-typescript": "npm:8.0.0-alpha.11"
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.2"
+    "@types/node": "npm:20.14.5"
     typescript: "npm:5.5.1-rc"
   peerDependencies:
     "@babel/core": "*"
@@ -1647,7 +1647,7 @@ __metadata:
     "@neetly/tsconfig": "workspace:*"
     "@types/eslint": "npm:8.56.10"
     "@types/eslint__js": "npm:8.42.3"
-    "@types/node": "npm:20.14.2"
+    "@types/node": "npm:20.14.5"
     "@typescript-eslint/utils": "npm:8.0.0-alpha.30"
     eslint: "npm:9.5.0"
     eslint-plugin-react-hooks: "npm:5.1.0-rc.0"
@@ -1699,7 +1699,7 @@ __metadata:
   resolution: "@neetly/yarn-constraints@workspace:packages/yarn-constraints"
   dependencies:
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.2"
+    "@types/node": "npm:20.14.5"
     "@yarnpkg/types": "npm:4.0.0"
     typescript: "npm:5.5.1-rc"
   peerDependencies:
@@ -1796,12 +1796,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.14.2":
-  version: 20.14.2
-  resolution: "@types/node@npm:20.14.2"
+"@types/node@npm:20.14.5":
+  version: 20.14.5
+  resolution: "@types/node@npm:20.14.5"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/2d86e5f2227aaa42212e82ea0affe72799111b888ff900916376450b02b09b963ca888b20d9c332d8d2b833ed4781987867a38eaa2e4863fa8439071468b0a6f
+  checksum: 10c0/06a8c304b5f7f190d4497807dc67ad09ee7b14ea2996bfdc823553c624698d8cab1ef9d16f8b764f20cb9eb11caa0e832787741e9ef70e1c89d620797ab28436
   languageName: node
   linkType: hard
 
