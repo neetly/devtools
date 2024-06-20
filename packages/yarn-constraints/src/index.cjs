@@ -1,5 +1,9 @@
 /**
- * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
+ * @import { Yarn } from "@yarnpkg/types"
+ */
+
+/**
+ * @param {Yarn.Constraints.Context} context
  */
 exports.recommended = ({ Yarn }) => {
   exports.enforceTypeModule({ Yarn });
@@ -8,7 +12,7 @@ exports.recommended = ({ Yarn }) => {
 };
 
 /**
- * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
+ * @param {Yarn.Constraints.Context} context
  */
 exports.enforceTypeModule = ({ Yarn }) => {
   for (const workspace of Yarn.workspaces()) {
@@ -17,7 +21,7 @@ exports.enforceTypeModule = ({ Yarn }) => {
 };
 
 /**
- * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
+ * @param {Yarn.Constraints.Context} context
  */
 exports.enforceProperExports = ({ Yarn }) => {
   for (const workspace of Yarn.workspaces()) {
@@ -47,7 +51,7 @@ exports.enforceProperExports = ({ Yarn }) => {
 };
 
 /**
- * @param {import("@yarnpkg/types").Yarn.Constraints.Context} context
+ * @param {Yarn.Constraints.Context} context
  */
 exports.enforceConsistentDependencies = ({ Yarn }) => {
   for (const dependency of Yarn.dependencies()) {
