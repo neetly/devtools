@@ -44,6 +44,6 @@
     "@neetly/tsconfig": "workspace:*",
     "@types/node": "20.14.6",
     "eslint": "9.5.0",
-    "typescript": "5.5.1-rc"
+    "typescript": "5.5.2"
   }
 }
