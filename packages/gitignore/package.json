@@ -18,8 +18,7 @@
   ],
   "scripts": {
     "build": "tsc --build && ../../scripts/compile.sh",
-    "build:clean": "tsc --build --clean && rm -rf ./lib",
-    "prepack": "run build:clean && run build && cp ../../LICENSE ./"
+    "prepack": "nx build && cp ../../LICENSE ./"
   },
   "devDependencies": {
     "@neetly/tsconfig": "workspace:*",

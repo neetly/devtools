@@ -6,8 +6,7 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "yarn workspaces foreach --all --topological-dev run build",
-    "build:clean": "yarn workspaces foreach --all --topological-dev run build:clean",
+    "build": "nx run-many --targets build",
     "check": "eslint && prettier --check .",
     "check:fix": "eslint --fix && prettier --write .",
     "publish": "yarn workspaces foreach --all --no-private npm publish --access public --tolerate-republish"
@@ -20,6 +19,7 @@
     "@neetly/yarn-constraints": "workspace:*",
     "@yarnpkg/types": "4.0.0",
     "eslint": "9.6.0",
+    "nx": "19.3.2",
     "prettier": "3.3.2",
     "typescript": "5.5.2"
   },

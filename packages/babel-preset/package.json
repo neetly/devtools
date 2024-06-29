@@ -22,8 +22,7 @@
   ],
   "scripts": {
     "build": "tsc --build",
-    "build:clean": "tsc --build --clean && rm -rf ./lib",
-    "prepack": "run build:clean && run build && cp ../../LICENSE ./"
+    "prepack": "nx build && cp ../../LICENSE ./"
   },
   "dependencies": {
     "@babel/helper-plugin-utils": "8.0.0-alpha.11",
