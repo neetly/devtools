@@ -1,3 +1,7 @@
 {
-  "extends": "@neetly/tsconfig"
+  "extends": "@neetly/tsconfig",
+
+  "compilerOptions": {
+    "types": ["node"]
+  }
 }
