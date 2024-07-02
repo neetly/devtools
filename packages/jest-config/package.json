@@ -1,0 +1,32 @@
+{
+  "name": "@neetly/jest-config",
+  "version": "1.0.0-alpha.13",
+  "homepage": "https://github.com/neetly/devtools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neetly/devtools.git",
+    "directory": "packages/jest-config"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "./lib"
+  ],
+  "scripts": {
+    "build": "tsc --build && ../../scripts/compile.sh",
+    "prepack": "nx build && cp ../../LICENSE ./"
+  },
+  "peerDependencies": {
+    "jest": "*"
+  },
+  "devDependencies": {
+    "@neetly/tsconfig": "workspace:*",
+    "@types/node": "20.14.9",
+    "jest": "29.7.0",
+    "typescript": "5.5.2"
+  }
+}
