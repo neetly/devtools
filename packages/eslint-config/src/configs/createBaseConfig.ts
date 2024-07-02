@@ -43,6 +43,12 @@ export const createBaseConfig = (): FlatConfig.ConfigArray => {
       rules: {
         "@typescript-eslint/explicit-module-boundary-types": "error",
 
+        // classes
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          { accessibility: "no-public" },
+        ],
+
         // promises
         "@typescript-eslint/promise-function-async": "error",
         "@typescript-eslint/return-await": ["error", "always"],
