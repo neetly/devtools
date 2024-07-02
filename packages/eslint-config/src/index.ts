@@ -5,9 +5,9 @@ import * as gitignore from "@neetly/gitignore";
 import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 import tseslint from "typescript-eslint";
 
-import { createBaseConfig } from "./configs/base.js";
-import { createNodeConfig } from "./configs/node.js";
-import { createReactConfig } from "./configs/react.js";
+import { createBaseConfig } from "./configs/createBaseConfig.js";
+import { createNodeConfig } from "./configs/createNodeConfig.js";
+import { createReactConfig } from "./configs/createReactConfig.js";
 
 export const createConfig = async ({
   rootDir,
