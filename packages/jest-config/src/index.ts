@@ -7,7 +7,7 @@ export const createConfig = async (): Promise<Config> => {
   return {
     injectGlobals: false,
 
-    testMatch: ["**/*.spec.{js,mjs,cjs,ts,tsx,mts,cts}"],
+    testMatch: ["<rootDir>/src/**/*.spec.{js,mjs,cjs,ts,tsx,mts,cts}"],
 
     // FIXME: https://github.com/jestjs/jest/issues/12800
     extensionsToTreatAsEsm: [".ts", ".tsx", ".mts"],
