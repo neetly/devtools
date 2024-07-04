@@ -1,3 +1,5 @@
+import { fileURLToPath } from "node:url";
+
 import type { Config } from "jest";
 
 export const createConfig = (): Config => {
@@ -10,7 +12,11 @@ export const createConfig = (): Config => {
     extensionsToTreatAsEsm: [".ts", ".tsx", ".mts"],
 
     transform: {
-      // TODO
+      "\\.(?:js|mjs|cjs|ts|tsx|mts|cts)$": [
+        // FIXME: https://github.com/jestjs/jest/pull/15154
+        fileURLToPath(import.meta.resolve("babel-jest")),
+        { presets: [import.meta.resolve("@neetly/babel-preset")] },
+      ],
     },
   };
 };

@@ -20,6 +20,11 @@
     "build": "tsc --build && ../../scripts/compile.sh",
     "prepack": "nx build && cp ../../LICENSE ./"
   },
+  "dependencies": {
+    "@babel/core": "8.0.0-alpha.11",
+    "@neetly/babel-preset": "workspace:*",
+    "babel-jest": "30.0.0-alpha.5"
+  },
   "peerDependencies": {
     "jest": "*"
   },

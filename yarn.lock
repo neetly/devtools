@@ -2281,8 +2281,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@neetly/jest-config@workspace:packages/jest-config"
   dependencies:
+    "@babel/core": "npm:8.0.0-alpha.11"
+    "@neetly/babel-preset": "workspace:*"
     "@neetly/tsconfig": "workspace:*"
     "@types/node": "npm:20.14.9"
+    babel-jest: "npm:30.0.0-alpha.5"
     jest: "npm:30.0.0-alpha.5"
     typescript: "npm:5.5.3"
   peerDependencies:
@@ -3039,6 +3042,23 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.11.0
   checksum: 10c0/0fd77457da34b57bcbff2252c7e5e8755b15689e4d67ec8f1c79315bae0e4bfaa439e67083e9d423449dee4f1d5fb925721e42a870077c87761aa1b6f58f980b
+  languageName: node
+  linkType: hard
+
+"babel-jest@patch:babel-jest@npm:30.0.0-alpha.5#~/patches/babel-jest.patch":
+  version: 30.0.0-alpha.5
+  resolution: "babel-jest@patch:babel-jest@npm%3A30.0.0-alpha.5#~/patches/babel-jest.patch::version=30.0.0-alpha.5&hash=980264"
+  dependencies:
+    "@jest/transform": "npm:30.0.0-alpha.5"
+    "@types/babel__core": "npm:^7.1.14"
+    babel-plugin-istanbul: "npm:^6.1.1"
+    babel-preset-jest: "npm:30.0.0-alpha.5"
+    chalk: "npm:^4.0.0"
+    graceful-fs: "npm:^4.2.9"
+    slash: "npm:^3.0.0"
+  peerDependencies:
+    "@babel/core": ^7.11.0
+  checksum: 10c0/ceaceaa10e51d0bc64f97fee9bd52df3c613bcc84da36c1a79b1a684c3b859a03f67b3c52a78773f314ca40b2ae8ea8823571a3f7db468f1d7712d022ee63bb4
   languageName: node
   linkType: hard
 

@@ -1,0 +1,34 @@
+diff --git a/build/index.js b/build/index.js
+index c3b081b2567ee17e2f23c2d0104c7ae671e8189f..e85914d50c0eb85964798da339b1e19434929631 100644
+--- a/build/index.js
++++ b/build/index.js
+@@ -131,7 +131,6 @@ function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e;
+  */
+ 
+ const THIS_FILE = fs().readFileSync(__filename);
+-const jestPresetPath = require.resolve('babel-preset-jest');
+ const babelIstanbulPlugin = require.resolve('babel-plugin-istanbul');
+ function assertLoadedBabelConfig(babelConfig, cwd, filename) {
+   if (!babelConfig) {
+@@ -199,7 +198,7 @@ const createTransformer = userOptions => {
+     },
+     compact: false,
+     plugins: inputOptions.plugins ?? [],
+-    presets: [...(inputOptions.presets ?? []), jestPresetPath],
++    presets: inputOptions.presets ?? [],
+     sourceMaps: 'both'
+   };
+   function mergeBabelTransformOptions(filename, transformOptions) {
+diff --git a/package.json b/package.json
+index fa61dbb727a37445bb6477821788486da059faaa..7d3262964bc535b8bc9980dd2cf7f2caeacdc71e 100644
+--- a/package.json
++++ b/package.json
+@@ -34,7 +34,7 @@
+     "@types/graceful-fs": "^4.1.3"
+   },
+   "peerDependencies": {
+-    "@babel/core": "^7.11.0"
++    "@babel/core": "^7.11.0 || ^8.0.0-0"
+   },
+   "engines": {
+     "node": "^16.10.0 || ^18.12.0 || >=20.0.0"
