@@ -3061,7 +3061,7 @@ __metadata:
 
 "babel-jest@patch:babel-jest@npm:30.0.0-alpha.5#~/patches/babel-jest.patch":
   version: 30.0.0-alpha.5
-  resolution: "babel-jest@patch:babel-jest@npm%3A30.0.0-alpha.5#~/patches/babel-jest.patch::version=30.0.0-alpha.5&hash=980264"
+  resolution: "babel-jest@patch:babel-jest@npm%3A30.0.0-alpha.5#~/patches/babel-jest.patch::version=30.0.0-alpha.5&hash=26a7d9"
   dependencies:
     "@jest/transform": "npm:30.0.0-alpha.5"
     "@types/babel__core": "npm:^7.1.14"
@@ -3072,7 +3072,7 @@ __metadata:
     slash: "npm:^3.0.0"
   peerDependencies:
     "@babel/core": ^7.11.0
-  checksum: 10c0/ceaceaa10e51d0bc64f97fee9bd52df3c613bcc84da36c1a79b1a684c3b859a03f67b3c52a78773f314ca40b2ae8ea8823571a3f7db468f1d7712d022ee63bb4
+  checksum: 10c0/721e7276de369ec2377839a29f23bae9d144a3b1dd63cd801b3ea51d5079fa7c56510ebed78d18d48234da5e533afd1da5d1362a5e37d53adacbc1cdf597bb20
   languageName: node
   linkType: hard
 

@@ -19,16 +19,3 @@ index c3b081b2567ee17e2f23c2d0104c7ae671e8189f..e85914d50c0eb85964798da339b1e194
      sourceMaps: 'both'
    };
    function mergeBabelTransformOptions(filename, transformOptions) {
-diff --git a/package.json b/package.json
-index fa61dbb727a37445bb6477821788486da059faaa..7d3262964bc535b8bc9980dd2cf7f2caeacdc71e 100644
---- a/package.json
-+++ b/package.json
-@@ -34,7 +34,7 @@
-     "@types/graceful-fs": "^4.1.3"
-   },
-   "peerDependencies": {
--    "@babel/core": "^7.11.0"
-+    "@babel/core": "^7.11.0 || ^8.0.0-0"
-   },
-   "engines": {
-     "node": "^16.10.0 || ^18.12.0 || >=20.0.0"
