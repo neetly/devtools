@@ -2210,6 +2210,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@neetly/babel-utils@workspace:*, @neetly/babel-utils@workspace:packages/babel-utils":
+  version: 0.0.0-use.local
+  resolution: "@neetly/babel-utils@workspace:packages/babel-utils"
+  dependencies:
+    "@babel/core": "npm:8.0.0-alpha.11"
+    "@neetly/tsconfig": "workspace:*"
+    "@types/node": "npm:20.14.9"
+    typescript: "npm:5.5.3"
+  peerDependencies:
+    "@babel/core": "*"
+  languageName: unknown
+  linkType: soft
+
 "@neetly/devtools@workspace:.":
   version: 0.0.0-use.local
   resolution: "@neetly/devtools@workspace:."
@@ -2283,6 +2296,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:8.0.0-alpha.11"
     "@neetly/babel-preset": "workspace:*"
+    "@neetly/babel-utils": "workspace:*"
     "@neetly/tsconfig": "workspace:*"
     "@types/node": "npm:20.14.9"
     babel-jest: "npm:30.0.0-alpha.5"
