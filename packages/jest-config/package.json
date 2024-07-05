@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@neetly/tsconfig": "workspace:*",
-    "@types/node": "20.14.9",
+    "@types/node": "20.14.10",
     "jest": "30.0.0-alpha.5",
     "typescript": "5.5.3"
   }
