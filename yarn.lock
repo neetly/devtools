@@ -2202,7 +2202,7 @@ __metadata:
     "@babel/preset-react": "npm:8.0.0-alpha.11"
     "@babel/preset-typescript": "npm:8.0.0-alpha.11"
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.10"
+    "@types/node": "npm:20.14.11"
     typescript: "npm:5.5.3"
   peerDependencies:
     "@babel/core": "*"
@@ -2215,7 +2215,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:8.0.0-alpha.11"
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.10"
+    "@types/node": "npm:20.14.11"
     typescript: "npm:5.5.3"
   peerDependencies:
     "@babel/core": "*"
@@ -2250,7 +2250,7 @@ __metadata:
     "@neetly/tsconfig": "workspace:*"
     "@types/eslint": "npm:8.56.10"
     "@types/eslint__js": "npm:8.42.3"
-    "@types/node": "npm:20.14.10"
+    "@types/node": "npm:20.14.11"
     "@typescript-eslint/utils": "npm:8.0.0-alpha.44"
     eslint: "npm:9.7.0"
     eslint-plugin-react-hooks: "npm:5.1.0-rc.0"
@@ -2271,7 +2271,7 @@ __metadata:
   resolution: "@neetly/eslint-plugin@workspace:packages/eslint-plugin"
   dependencies:
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.10"
+    "@types/node": "npm:20.14.11"
     "@typescript-eslint/utils": "npm:8.0.0-alpha.44"
     eslint: "npm:9.7.0"
     typescript: "npm:5.5.3"
@@ -2297,7 +2297,7 @@ __metadata:
     "@neetly/babel-preset": "workspace:*"
     "@neetly/babel-utils": "workspace:*"
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.10"
+    "@types/node": "npm:20.14.11"
     babel-jest: "npm:30.0.0-alpha.5"
     jest: "npm:30.0.0-alpha.5"
     typescript: "npm:5.5.3"
@@ -2321,7 +2321,7 @@ __metadata:
   resolution: "@neetly/yarn-constraints@workspace:packages/yarn-constraints"
   dependencies:
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.10"
+    "@types/node": "npm:20.14.11"
     "@yarnpkg/types": "npm:4.0.0"
     typescript: "npm:5.5.3"
   peerDependencies:
@@ -2605,12 +2605,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.14.10":
-  version: 20.14.10
-  resolution: "@types/node@npm:20.14.10"
+"@types/node@npm:*, @types/node@npm:20.14.11":
+  version: 20.14.11
+  resolution: "@types/node@npm:20.14.11"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/0b06cff14365c2d0085dc16cc8cbea5c40ec09cfc1fea966be9eeecf35562760bfde8f88e86de6edfaf394501236e229d9c1084fad04fb4dec472ae245d8ae69
+  checksum: 10c0/5306becc0ff41d81b1e31524bd376e958d0741d1ce892dffd586b9ae0cb6553c62b0d62abd16da8bea6b9a2c17572d360450535d7c073794b0cef9cb4e39691e
   languageName: node
   linkType: hard
 
