@@ -16,9 +16,12 @@ export const createConfig = async (): Promise<Config> => {
       "\\.(?:js|mjs|cjs|ts|tsx|mts|cts)$": [
         // FIXME: https://github.com/jestjs/jest/issues/15153
         fileURLToPath(import.meta.resolve("babel-jest")),
-        await babelUtils.createOptions({
-          defaultPresets: [import.meta.resolve("@neetly/babel-preset")],
-        }),
+        {
+          excludeJestPreset: true,
+          ...(await babelUtils.createOptions({
+            defaultPresets: [import.meta.resolve("@neetly/babel-preset")],
+          })),
+        },
       ],
     },
   };
