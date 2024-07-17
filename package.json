@@ -24,7 +24,8 @@
     "typescript": "5.5.3"
   },
   "resolutions": {
-    "babel-jest@npm:30.0.0-alpha.5": "patch:babel-jest@npm:30.0.0-alpha.5#~/patches/babel-jest.patch"
+    "babel-jest@npm:30.0.0-alpha.5": "patch:babel-jest@npm:30.0.0-alpha.5#~/patches/babel-jest.patch",
+    "jest-resolve@npm:30.0.0-alpha.5": "patch:jest-resolve@npm:30.0.0-alpha.5#~/patches/jest-resolve.patch"
   },
   "packageManager": "yarn@4.3.1"
 }

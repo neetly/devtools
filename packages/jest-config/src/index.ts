@@ -1,5 +1,3 @@
-import { fileURLToPath } from "node:url";
-
 import * as babelUtils from "@neetly/babel-utils";
 import type { Config } from "jest";
 
@@ -14,8 +12,7 @@ export const createConfig = async (): Promise<Config> => {
 
     transform: {
       "\\.(?:js|mjs|cjs|ts|tsx|mts|cts)$": [
-        // FIXME: https://github.com/jestjs/jest/issues/15153
-        fileURLToPath(import.meta.resolve("babel-jest")),
+        import.meta.resolve("babel-jest"),
         {
           excludeJestPreset: true,
           ...(await babelUtils.createOptions({
