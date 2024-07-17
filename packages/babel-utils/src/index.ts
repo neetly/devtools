@@ -25,11 +25,11 @@ export const createOptions = async ({
   return {
     babelrc: false,
     presets: [
-      ...(useDefaultPresetsAndPlugins ? [] : defaultPresets),
+      ...(useDefaultPresetsAndPlugins ? defaultPresets : []),
       ...extraPresets,
     ],
     plugins: [
-      ...(useDefaultPresetsAndPlugins ? [] : defaultPlugins),
+      ...(useDefaultPresetsAndPlugins ? defaultPlugins : []),
       ...extraPlugins,
     ],
     ...options,
