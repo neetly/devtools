@@ -2323,12 +2323,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@neetly/gitignore@workspace:packages/gitignore"
   dependencies:
+    "@jest/globals": "npm:30.0.0-alpha.5"
+    "@neetly/jest-config": "workspace:*"
     "@neetly/tsconfig": "workspace:*"
+    jest: "npm:30.0.0-alpha.5"
     typescript: "npm:5.5.3"
   languageName: unknown
   linkType: soft
 
-"@neetly/jest-config@workspace:packages/jest-config":
+"@neetly/jest-config@workspace:*, @neetly/jest-config@workspace:packages/jest-config":
   version: 0.0.0-use.local
   resolution: "@neetly/jest-config@workspace:packages/jest-config"
   dependencies:

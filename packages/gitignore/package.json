@@ -17,11 +17,15 @@
     "./lib"
   ],
   "scripts": {
+    "test": "node --experimental-vm-modules --experimental-require-module \"$(yarn bin jest)\"",
     "build": "tsc --build && ../../scripts/compile.sh",
     "prepack": "nx build && cp ../../LICENSE ./"
   },
   "devDependencies": {
+    "@jest/globals": "30.0.0-alpha.5",
+    "@neetly/jest-config": "workspace:*",
     "@neetly/tsconfig": "workspace:*",
+    "jest": "30.0.0-alpha.5",
     "typescript": "5.5.3"
   }
 }

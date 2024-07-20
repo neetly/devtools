@@ -1,7 +1,9 @@
 import type { ResolverOptions } from "jest-resolve";
 
-const resolver = (path: string, options: ResolverOptions): string => {
+export const sync = (path: string, options: ResolverOptions): string => {
   return options.defaultResolver(path, options);
 };
 
-export default resolver;
+export const async = (path: string, options: ResolverOptions): string => {
+  return options.defaultResolver(path, options);
+};
