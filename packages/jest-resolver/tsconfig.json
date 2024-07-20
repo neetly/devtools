@@ -1,0 +1,7 @@
+{
+  "extends": "@neetly/tsconfig",
+
+  "compilerOptions": {
+    "types": ["node"]
+  }
+}

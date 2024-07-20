@@ -2335,6 +2335,7 @@ __metadata:
     "@babel/core": "npm:8.0.0-alpha.11"
     "@neetly/babel-preset": "workspace:*"
     "@neetly/babel-utils": "workspace:*"
+    "@neetly/jest-resolver": "workspace:*"
     "@neetly/tsconfig": "workspace:*"
     "@types/node": "npm:20.14.11"
     babel-jest: "npm:30.0.0-alpha.5"
@@ -2342,6 +2343,18 @@ __metadata:
     typescript: "npm:5.5.3"
   peerDependencies:
     jest: "*"
+  languageName: unknown
+  linkType: soft
+
+"@neetly/jest-resolver@workspace:*, @neetly/jest-resolver@workspace:packages/jest-resolver":
+  version: 0.0.0-use.local
+  resolution: "@neetly/jest-resolver@workspace:packages/jest-resolver"
+  dependencies:
+    "@neetly/tsconfig": "workspace:*"
+    "@types/node": "npm:20.14.11"
+    enhanced-resolve: "npm:5.17.0"
+    jest-resolve: "npm:30.0.0-alpha.5"
+    typescript: "npm:5.5.3"
   languageName: unknown
   linkType: soft
 
@@ -3746,6 +3759,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"enhanced-resolve@npm:5.17.0":
+  version: 5.17.0
+  resolution: "enhanced-resolve@npm:5.17.0"
+  dependencies:
+    graceful-fs: "npm:^4.2.4"
+    tapable: "npm:^2.2.0"
+  checksum: 10c0/90065e58e4fd08e77ba47f827eaa17d60c335e01e4859f6e644bb3b8d0e32b203d33894aee92adfa5121fa262f912b48bdf0d0475e98b4a0a1132eea1169ad37
+  languageName: node
+  linkType: hard
+
 "enquirer@npm:~2.3.6":
   version: 2.3.6
   resolution: "enquirer@npm:2.3.6"
@@ -4520,7 +4543,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
+"graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: 10c0/386d011a553e02bc594ac2ca0bd6d9e4c22d7fa8cfbfc448a6d148c59ea881b092db9dbe3547ae4b88e55f1b01f7c4a2ecc53b310c042793e63aa44cf6c257f2
@@ -6958,6 +6981,13 @@ __metadata:
     "@pkgr/core": "npm:^0.1.0"
     tslib: "npm:^2.6.2"
   checksum: 10c0/b5c1e7c03fefe3d36a9ab4e71dd21859cb32be4138712c31a893382a568fd00efc59ede8f521dd7e53d43a2fea92bdf717e987ea9ed6ad94f97ef28d71d0ba2f
+  languageName: node
+  linkType: hard
+
+"tapable@npm:^2.2.0":
+  version: 2.2.1
+  resolution: "tapable@npm:2.2.1"
+  checksum: 10c0/bc40e6efe1e554d075469cedaba69a30eeb373552aaf41caeaaa45bf56ffacc2674261b106245bd566b35d8f3329b52d838e851ee0a852120acae26e622925c9
   languageName: node
   linkType: hard
 

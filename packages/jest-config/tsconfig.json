@@ -5,5 +5,9 @@
     "types": ["node"]
   },
 
-  "references": [{ "path": "../babel-utils" }]
+  "references": [
+    { "path": "../jest-resolver" },
+    { "path": "../babel-utils" },
+    { "path": "../babel-preset" }
+  ]
 }

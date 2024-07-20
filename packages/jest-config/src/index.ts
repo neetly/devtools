@@ -7,6 +7,8 @@ export const createConfig = async (): Promise<Config> => {
 
     testMatch: ["<rootDir>/src/**/*.spec.{js,mjs,cjs,ts,tsx,mts,cts}"],
 
+    resolver: import.meta.resolve("@neetly/jest-resolver"),
+
     // FIXME: https://github.com/jestjs/jest/issues/12800
     extensionsToTreatAsEsm: [".ts", ".tsx", ".mts"],
 
