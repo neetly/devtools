@@ -4,7 +4,7 @@ export const parse = (content: string): { patterns: readonly string[] } => {
     // Remove BOM
     .replace(/^\uFEFF/, "")
 
-    // Split by LF or CRLF
+    // Split by LF and CRLF
     .split(/\r?\n/)
 
     // Remove comments
@@ -14,10 +14,7 @@ export const parse = (content: string): { patterns: readonly string[] } => {
     // Remove trailing spaces
     .map((pattern) => pattern.replace(/(?<!\\) +$/, "").replace(/\\ $/, " "))
 
-    // Remove empty patterns
-    .filter((pattern) => pattern !== "")
-
-    // Remove non-sense patterns
+    // Remove empty and non-sense patterns
     .filter((pattern) => !/^!?\/?$/.test(pattern))
 
     // Normalize slashes ("/") and two consecutive asterisks ("**")
@@ -25,7 +22,7 @@ export const parse = (content: string): { patterns: readonly string[] } => {
       const isNegative = pattern.startsWith("!");
       const isDirectory = pattern.endsWith("/");
       let path = pattern.replace(/^!/, "").replace(/\/$/, "");
-      if (!path.includes("/")) {
+      if (path !== "**" && !path.includes("/")) {
         path = "**/" + path;
       }
       path = path.replace(/^\//, "");
@@ -34,7 +31,7 @@ export const parse = (content: string): { patterns: readonly string[] } => {
     })
 
     // Escape special characters
-    .map((pattern) => pattern.replace(/[(){}\\]/g, "\\$&"));
+    .map((pattern) => pattern.replace(/[(){}]/g, "\\$&"));
 
   return { patterns };
 };

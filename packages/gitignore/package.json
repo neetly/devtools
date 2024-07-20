@@ -17,7 +17,7 @@
     "./lib"
   ],
   "scripts": {
-    "test": "node --experimental-vm-modules --experimental-require-module \"$(yarn bin jest)\"",
+    "test": "node --experimental-vm-modules --experimental-require-module --disable-warning ExperimentalWarning \"$(yarn bin jest)\"",
     "build": "tsc --build && ../../scripts/compile.sh",
     "prepack": "nx build && cp ../../LICENSE ./"
   },
@@ -26,6 +26,7 @@
     "@neetly/jest-config": "workspace:*",
     "@neetly/tsconfig": "workspace:*",
     "jest": "30.0.0-alpha.5",
+    "minimatch": "10.0.1",
     "typescript": "5.5.3"
   }
 }
