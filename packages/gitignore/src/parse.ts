@@ -1,6 +1,6 @@
 export const parse = (content: string): { patterns: readonly string[] } => {
   const patterns = content
-    .split("\n")
+    .split(/\r?\n/)
 
     // Remove comments
     .filter((pattern) => !pattern.startsWith("#"))
