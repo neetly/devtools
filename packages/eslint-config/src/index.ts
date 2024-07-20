@@ -11,8 +11,10 @@ import { createReactConfig } from "./configs/createReactConfig.js";
 
 export const createConfig = async ({
   rootDir,
+  ignores: customIgnores = [],
 }: {
   rootDir: string;
+  ignores?: readonly string[];
 }): Promise<FlatConfig.ConfigArray> => {
   let ignores: readonly string[];
   try {
@@ -27,11 +29,13 @@ export const createConfig = async ({
 
   return tseslint.config(
     {
-      ignores: ignores.slice(),
+      ignores: [...ignores, ...customIgnores],
     },
 
     ...createBaseConfig(),
+
     ...createNodeConfig(),
+
     ...createReactConfig(),
   );
 };
