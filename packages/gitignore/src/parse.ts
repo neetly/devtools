@@ -1,5 +1,6 @@
 export const parse = (content: string): { patterns: readonly string[] } => {
   const patterns = content
+    .replace(/^\uFEFF/, "")
     .split(/\r?\n/)
 
     // Remove comments
