@@ -26,6 +26,48 @@ exports[`parse pattern " \\\\ " 1`] = `
 ]
 `;
 
+exports[`parse pattern " \\\\ " 2`] = `
+[
+  "**/  ",
+]
+`;
+
+exports[`parse pattern " \\\\ " 3`] = `
+[
+  "**/  ",
+]
+`;
+
+exports[`parse pattern " \\\\ file" 1`] = `
+[
+  "**/ \\ file",
+]
+`;
+
+exports[`parse pattern " \\\\\\\\ " 1`] = `
+[
+  "**/ \\\\",
+]
+`;
+
+exports[`parse pattern " \\\\\\\\ " 2`] = `
+[
+  "**/ \\\\",
+]
+`;
+
+exports[`parse pattern " \\\\\\\\ " 3`] = `
+[
+  "**/ \\\\",
+]
+`;
+
+exports[`parse pattern " \\\\\\\\ file" 1`] = `
+[
+  "**/ \\\\ file",
+]
+`;
+
 exports[`parse pattern "!file" 1`] = `
 [
   "!**/file",
@@ -226,6 +268,24 @@ exports[`parse pattern "\\\\  " 1`] = `
 ]
 `;
 
+exports[`parse pattern "\\\\  " 2`] = `
+[
+  "**/ ",
+]
+`;
+
+exports[`parse pattern "\\\\  " 3`] = `
+[
+  "**/ ",
+]
+`;
+
+exports[`parse pattern "\\\\  file" 1`] = `
+[
+  "**/\\  file",
+]
+`;
+
 exports[`parse pattern "\\\\!(a|b|c)" 1`] = `
 [
   "**/\\!\\(a|b|c\\)",
@@ -289,6 +349,30 @@ exports[`parse pattern "\\\\[abc\\\\]" 1`] = `
 exports[`parse pattern "\\\\[abc]" 1`] = `
 [
   "**/\\[abc]",
+]
+`;
+
+exports[`parse pattern "\\\\\\\\  " 1`] = `
+[
+  "**/\\\\",
+]
+`;
+
+exports[`parse pattern "\\\\\\\\  " 2`] = `
+[
+  "**/\\\\",
+]
+`;
+
+exports[`parse pattern "\\\\\\\\  " 3`] = `
+[
+  "**/\\\\",
+]
+`;
+
+exports[`parse pattern "\\\\\\\\  file" 1`] = `
+[
+  "**/\\\\  file",
 ]
 `;
 
@@ -409,6 +493,30 @@ exports[`parse pattern "dir/file" 1`] = `
 exports[`parse pattern "fi  le" 1`] = `
 [
   "**/fi  le",
+]
+`;
+
+exports[`parse pattern "fi \\\\ le" 1`] = `
+[
+  "**/fi \\ le",
+]
+`;
+
+exports[`parse pattern "fi \\\\\\\\ le" 1`] = `
+[
+  "**/fi \\\\ le",
+]
+`;
+
+exports[`parse pattern "fi\\\\  le" 1`] = `
+[
+  "**/fi\\  le",
+]
+`;
+
+exports[`parse pattern "fi\\\\\\\\  le" 1`] = `
+[
+  "**/fi\\\\  le",
 ]
 `;
 

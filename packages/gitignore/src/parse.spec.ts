@@ -53,15 +53,29 @@ describe("parse", () => {
 
     // spaces
     ["  ", { " ": false, "  ": false }],
-    ["\\  ", { " ": true, "  ": false }],
-    [" \\ ", { " ": false, "  ": true }],
     ["  file", { file: false, " file": false, "  file": true }],
     ["fi  le", { file: false, "fi le": false, "fi  le": true }],
     ["file  ", { file: true, "file ": false, "file  ": false }],
+
+    ["\\  ", { " ": true, "  ": false }],
+    [" \\ ", { " ": false, "  ": true }],
+    ["\\\\  ", { "\\": true, "\\ ": false, "\\  ": false }],
+    [" \\\\ ", { " \\": true, " \\ ": false }],
+
+    ["\\  file", { file: false, " file": false, "  file": true }],
+    [" \\ file", { file: false, " file": false, "  file": true }],
+    ["\\\\  file", { "\\  file": true }],
+    [" \\\\ file", { " \\ file": true }],
+
+    ["fi\\  le", { file: false, "fi le": false, "fi  le": true }],
+    ["fi \\ le", { file: false, "fi le": false, "fi  le": true }],
+    ["fi\\\\  le", { "fi\\  le": true }],
+    ["fi \\\\ le", { "fi \\ le": true }],
+
     ["file\\  ", { file: false, "file ": true, "file  ": false }],
     ["file \\ ", { file: false, "file ": false, "file  ": true }],
-    ["file\\\\  ", { "file\\": true, "file ": false }],
-    ["file \\\\ ", { "file \\": true, "file  ": false }],
+    ["file\\\\  ", { "file\\": true, "file\\ ": false, "file\\  ": false }],
+    ["file \\\\ ", { "file \\": true, "file \\ ": false }],
 
     // negative patterns
     ["!file", { file: false, "!file": false }],
