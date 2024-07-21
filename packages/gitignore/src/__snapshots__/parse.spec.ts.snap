@@ -26,18 +26,6 @@ exports[`parse pattern " \\\\ " 1`] = `
 ]
 `;
 
-exports[`parse pattern " \\\\ " 2`] = `
-[
-  "**/  ",
-]
-`;
-
-exports[`parse pattern " \\\\ " 3`] = `
-[
-  "**/  ",
-]
-`;
-
 exports[`parse pattern " \\\\ file" 1`] = `
 [
   "**/ \\ file",
@@ -45,18 +33,6 @@ exports[`parse pattern " \\\\ file" 1`] = `
 `;
 
 exports[`parse pattern " \\\\\\\\ " 1`] = `
-[
-  "**/ \\\\",
-]
-`;
-
-exports[`parse pattern " \\\\\\\\ " 2`] = `
-[
-  "**/ \\\\",
-]
-`;
-
-exports[`parse pattern " \\\\\\\\ " 3`] = `
 [
   "**/ \\\\",
 ]
@@ -268,18 +244,6 @@ exports[`parse pattern "\\\\  " 1`] = `
 ]
 `;
 
-exports[`parse pattern "\\\\  " 2`] = `
-[
-  "**/ ",
-]
-`;
-
-exports[`parse pattern "\\\\  " 3`] = `
-[
-  "**/ ",
-]
-`;
-
 exports[`parse pattern "\\\\  file" 1`] = `
 [
   "**/\\  file",
@@ -353,18 +317,6 @@ exports[`parse pattern "\\\\[abc]" 1`] = `
 `;
 
 exports[`parse pattern "\\\\\\\\  " 1`] = `
-[
-  "**/\\\\",
-]
-`;
-
-exports[`parse pattern "\\\\\\\\  " 2`] = `
-[
-  "**/\\\\",
-]
-`;
-
-exports[`parse pattern "\\\\\\\\  " 3`] = `
 [
   "**/\\\\",
 ]
