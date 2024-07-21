@@ -180,6 +180,7 @@ describe("parse", () => {
   test.each([
     // invalid patterns
     // "[]",
+    // "[/]",
     // "[",
     // "[abc",
     // "[\\]",
