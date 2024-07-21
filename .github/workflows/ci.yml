@@ -17,5 +17,8 @@ jobs:
 
       - run: yarn nx run-many --projects @neetly/eslint-config --targets build
       - run: yarn check
+
+      - run: yarn nx run-many --projects @neetly/jest-config --targets build
       - run: yarn test
+
       - run: yarn build
