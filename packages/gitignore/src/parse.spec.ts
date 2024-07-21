@@ -60,6 +60,8 @@ describe("parse", () => {
     ["file  ", { file: true, "file ": false, "file  ": false }],
     ["file\\  ", { file: false, "file ": true, "file  ": false }],
     ["file \\ ", { file: false, "file ": false, "file  ": true }],
+    ["file\\\\  ", { "file\\": true, "file ": false }],
+    ["file \\\\ ", { "file \\": true, "file  ": false }],
 
     // negative patterns
     ["!file", { file: false, "!file": false }],

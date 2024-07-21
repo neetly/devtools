@@ -12,7 +12,13 @@ export const parse = (content: string): { patterns: readonly string[] } => {
     .map((pattern) => pattern.replace(/^\\#/, "#"))
 
     // Remove trailing spaces
-    .map((pattern) => pattern.replace(/(?<!\\) +$/, "").replace(/\\ $/, " "))
+    .map((pattern) => {
+      return pattern.replace(/(\\*) +$/, (_, backslashes: string) => {
+        return backslashes.length % 2 === 0
+          ? backslashes + ""
+          : backslashes.slice(0, -1) + " ";
+      });
+    })
 
     // Remove empty and non-sense patterns
     .filter((pattern) => !/^!?\/?$/.test(pattern))

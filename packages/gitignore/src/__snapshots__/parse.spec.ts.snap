@@ -424,6 +424,12 @@ exports[`parse pattern "file \\\\ " 1`] = `
 ]
 `;
 
+exports[`parse pattern "file \\\\\\\\ " 1`] = `
+[
+  "**/file \\\\",
+]
+`;
+
 exports[`parse pattern "file" 1`] = `
 [
   "**/file",
@@ -433,6 +439,12 @@ exports[`parse pattern "file" 1`] = `
 exports[`parse pattern "file\\\\  " 1`] = `
 [
   "**/file ",
+]
+`;
+
+exports[`parse pattern "file\\\\\\\\  " 1`] = `
+[
+  "**/file\\\\",
 ]
 `;
 
