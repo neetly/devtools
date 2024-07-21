@@ -144,7 +144,7 @@ describe("parse", () => {
     ["[a\\bc]", { a: true, b: true, c: true, "\\": false }],
     ["[a\\\\bc]", { a: true, b: true, c: true, "\\": true }],
     ["[a\\-c]", { a: true, b: false, c: true, "-": true }],
-  ])("%s", (content, files) => {
+  ])("pattern %p", (content, files) => {
     const { patterns, ignores } = createTester([content].flat().join("\n"));
     expect(patterns).toMatchSnapshot();
     for (const [file, isIgnored] of Object.entries(files)) {
@@ -154,7 +154,7 @@ describe("parse", () => {
 
   // invalid patterns
   // test.each(["[]", "[", "[abc", "[\\]", "[\\["])(
-  //   "invalid pattern %s",
+  //   "invalid pattern %p",
   //   (content) => {
   //     const { patterns } = parse(content);
   //     expect(patterns).toStrictEqual([]);

@@ -1,163 +1,419 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`parse    1`] = `[]`;
+exports[`parse pattern "  " 1`] = `[]`;
 
-exports[`parse   file 1`] = `
+exports[`parse pattern "  file" 1`] = `
 [
   "**/  file",
 ]
 `;
 
-exports[`parse  \\  1`] = `
+exports[`parse pattern " \\\\ " 1`] = `
 [
   "**/  ",
 ]
 `;
 
-exports[`parse  1`] = `[]`;
+exports[`parse pattern "!" 1`] = `[]`;
 
-exports[`parse ! 1`] = `[]`;
+exports[`parse pattern "!/" 1`] = `[]`;
 
-exports[`parse !/ 1`] = `[]`;
-
-exports[`parse !file 1`] = `
+exports[`parse pattern "!file" 1`] = `
 [
   "!**/file",
 ]
 `;
 
-exports[`parse #file 1`] = `[]`;
+exports[`parse pattern "" 1`] = `[]`;
 
-exports[`parse *(a|b|c) 1`] = `
+exports[`parse pattern "#file" 1`] = `[]`;
+
+exports[`parse pattern "*(a|b|c)" 1`] = `
 [
   "**/*\\(a|b|c\\)",
 ]
 `;
 
-exports[`parse ** 1`] = `
+exports[`parse pattern "**" 1`] = `
 [
   "**/*",
 ]
 `;
 
-exports[`parse **/ 1`] = `
+exports[`parse pattern "**/" 1`] = `
 [
   "**/*/",
 ]
 `;
 
-exports[`parse **/dir 1`] = `
+exports[`parse pattern "**/dir" 1`] = `
 [
   "**/dir",
 ]
 `;
 
-exports[`parse **/dir/ 1`] = `
+exports[`parse pattern "**/dir/" 1`] = `
 [
   "**/dir/",
 ]
 `;
 
-exports[`parse **/dir/file 1`] = `
+exports[`parse pattern "**/dir/file" 1`] = `
 [
   "**/dir/file",
 ]
 `;
 
-exports[`parse **/file 1`] = `
+exports[`parse pattern "**/file" 1`] = `
 [
   "**/file",
 ]
 `;
 
-exports[`parse *c 1`] = `
+exports[`parse pattern "*c" 1`] = `
 [
   "**/*c",
 ]
 `;
 
-exports[`parse +(a|b|c) 1`] = `
+exports[`parse pattern "+(a|b|c)" 1`] = `
 [
   "**/+\\(a|b|c\\)",
 ]
 `;
 
-exports[`parse / 1`] = `[]`;
+exports[`parse pattern "/" 1`] = `[]`;
 
-exports[`parse /** 1`] = `
+exports[`parse pattern "/**" 1`] = `
 [
   "**/*",
 ]
 `;
 
-exports[`parse /**/ 1`] = `
+exports[`parse pattern "/**/" 1`] = `
 [
   "**/*/",
 ]
 `;
 
-exports[`parse /dir 1`] = `
+exports[`parse pattern "/dir" 1`] = `
 [
   "dir",
 ]
 `;
 
-exports[`parse /dir/ 1`] = `
+exports[`parse pattern "/dir/" 1`] = `
 [
   "dir/",
 ]
 `;
 
-exports[`parse /dir/** 1`] = `
+exports[`parse pattern "/dir/**" 1`] = `
 [
   "dir/**/*",
 ]
 `;
 
-exports[`parse /dir/**/ 1`] = `
+exports[`parse pattern "/dir/**/" 1`] = `
 [
   "dir/**/*/",
 ]
 `;
 
-exports[`parse /dir/**/file 1`] = `
+exports[`parse pattern "/dir/**/file" 1`] = `
 [
   "dir/**/file",
 ]
 `;
 
-exports[`parse /dir/file 1`] = `
+exports[`parse pattern "/dir/file" 1`] = `
 [
   "dir/file",
 ]
 `;
 
-exports[`parse /file 1`] = `
+exports[`parse pattern "/file" 1`] = `
 [
   "file",
 ]
 `;
 
-exports[`parse ?(a|b|c) 1`] = `
+exports[`parse pattern "?(a|b|c)" 1`] = `
 [
   "**/?\\(a|b|c\\)",
 ]
 `;
 
-exports[`parse @(a|b|c) 1`] = `
+exports[`parse pattern "@(a|b|c)" 1`] = `
 [
   "**/@\\(a|b|c\\)",
 ]
 `;
 
-exports[`parse [ '/dir/**', '!/dir/file' ] 1`] = `
+exports[`parse pattern "[[\\\\]]" 1`] = `
+[
+  "**/[[\\]]",
+]
+`;
+
+exports[`parse pattern "[[]" 1`] = `
+[
+  "**/[[]",
+]
+`;
+
+exports[`parse pattern "[[]]" 1`] = `
+[
+  "**/[[]]",
+]
+`;
+
+exports[`parse pattern "[]]" 1`] = `
+[
+  "**/[]]",
+]
+`;
+
+exports[`parse pattern "[{}()]" 1`] = `
+[
+  "**/[\\{\\}\\(\\)]",
+]
+`;
+
+exports[`parse pattern "[a\\\\\\\\bc]" 1`] = `
+[
+  "**/[a\\\\bc]",
+]
+`;
+
+exports[`parse pattern "[a\\\\-c]" 1`] = `
+[
+  "**/[a\\-c]",
+]
+`;
+
+exports[`parse pattern "[a\\\\bc]" 1`] = `
+[
+  "**/[a\\bc]",
+]
+`;
+
+exports[`parse pattern "[a-c]" 1`] = `
+[
+  "**/[a-c]",
+]
+`;
+
+exports[`parse pattern "[abc]" 1`] = `
+[
+  "**/[abc]",
+]
+`;
+
+exports[`parse pattern "\\\\  " 1`] = `
+[
+  "**/ ",
+]
+`;
+
+exports[`parse pattern "\\\\!(a|b|c)" 1`] = `
+[
+  "**/\\!\\(a|b|c\\)",
+]
+`;
+
+exports[`parse pattern "\\\\!file" 1`] = `
+[
+  "**/\\!file",
+]
+`;
+
+exports[`parse pattern "\\\\#file" 1`] = `
+[
+  "**/#file",
+]
+`;
+
+exports[`parse pattern "\\\\*c" 1`] = `
+[
+  "**/\\*c",
+]
+`;
+
+exports[`parse pattern "\\\\[" 1`] = `
+[
+  "**/\\[",
+]
+`;
+
+exports[`parse pattern "\\\\[\\\\]" 1`] = `
+[
+  "**/\\[\\]",
+]
+`;
+
+exports[`parse pattern "\\\\[]" 1`] = `
+[
+  "**/\\[]",
+]
+`;
+
+exports[`parse pattern "\\\\[abc" 1`] = `
+[
+  "**/\\[abc",
+]
+`;
+
+exports[`parse pattern "\\\\[abc\\\\]" 1`] = `
+[
+  "**/\\[abc\\]",
+]
+`;
+
+exports[`parse pattern "\\\\[abc]" 1`] = `
+[
+  "**/\\[abc]",
+]
+`;
+
+exports[`parse pattern "{a,b,c}" 1`] = `
+[
+  "**/\\{a,b,c\\}",
+]
+`;
+
+exports[`parse pattern "a*" 1`] = `
+[
+  "**/a*",
+]
+`;
+
+exports[`parse pattern "a*c" 1`] = `
+[
+  "**/a*c",
+]
+`;
+
+exports[`parse pattern "a/*/c" 1`] = `
+[
+  "a/*/c",
+]
+`;
+
+exports[`parse pattern "a/\\\\*/c" 1`] = `
+[
+  "a/\\*/c",
+]
+`;
+
+exports[`parse pattern "a\\\\*" 1`] = `
+[
+  "**/a\\*",
+]
+`;
+
+exports[`parse pattern "a\\\\*c" 1`] = `
+[
+  "**/a\\*c",
+]
+`;
+
+exports[`parse pattern "a\\\\\\\\bc" 1`] = `
+[
+  "**/a\\\\bc",
+]
+`;
+
+exports[`parse pattern "a\\\\bc" 1`] = `
+[
+  "**/a\\bc",
+]
+`;
+
+exports[`parse pattern "dir" 1`] = `
+[
+  "**/dir",
+]
+`;
+
+exports[`parse pattern "dir/" 1`] = `
+[
+  "**/dir/",
+]
+`;
+
+exports[`parse pattern "dir/file" 1`] = `
+[
+  "dir/file",
+]
+`;
+
+exports[`parse pattern "fi  le" 1`] = `
+[
+  "**/fi  le",
+]
+`;
+
+exports[`parse pattern "file
+dir/file" 1`] = `
+[
+  "**/file",
+  "dir/file",
+]
+`;
+
+exports[`parse pattern "file
+dir/file" 1`] = `
+[
+  "**/file",
+  "dir/file",
+]
+`;
+
+exports[`parse pattern "file  " 1`] = `
+[
+  "**/file",
+]
+`;
+
+exports[`parse pattern "file \\\\ " 1`] = `
+[
+  "**/file  ",
+]
+`;
+
+exports[`parse pattern "file" 1`] = `
+[
+  "**/file",
+]
+`;
+
+exports[`parse pattern "file\\\\  " 1`] = `
+[
+  "**/file ",
+]
+`;
+
+exports[`parse pattern "x/!(a|b|c)" 1`] = `
+[
+  "x/!\\(a|b|c\\)",
+]
+`;
+
+exports[`parse pattern "﻿file" 1`] = `
+[
+  "**/file",
+]
+`;
+
+exports[`parse pattern ["/dir/**", "!/dir/file"] 1`] = `
 [
   "dir/**/*",
   "!dir/file",
 ]
 `;
 
-exports[`parse [ '/dir/**', '!/dir/sub', '!/dir/sub/file' ] 1`] = `
+exports[`parse pattern ["/dir/**", "!/dir/sub", "!/dir/sub/file"] 1`] = `
 [
   "dir/**/*",
   "!dir/sub",
@@ -165,7 +421,7 @@ exports[`parse [ '/dir/**', '!/dir/sub', '!/dir/sub/file' ] 1`] = `
 ]
 `;
 
-exports[`parse [ '/dir/**', '!/dir/sub/', '!/dir/sub/file' ] 1`] = `
+exports[`parse pattern ["/dir/**", "!/dir/sub/", "!/dir/sub/file"] 1`] = `
 [
   "dir/**/*",
   "!dir/sub/",
@@ -173,286 +429,30 @@ exports[`parse [ '/dir/**', '!/dir/sub/', '!/dir/sub/file' ] 1`] = `
 ]
 `;
 
-exports[`parse [ '/dir/**', '!/dir/sub/file' ] 1`] = `
+exports[`parse pattern ["/dir/**", "!/dir/sub/file"] 1`] = `
 [
   "dir/**/*",
   "!dir/sub/file",
 ]
 `;
 
-exports[`parse [ '/dir/**/', '!/dir/sub' ] 1`] = `
+exports[`parse pattern ["/dir/**/", "!/dir/sub"] 1`] = `
 [
   "dir/**/*/",
   "!dir/sub",
 ]
 `;
 
-exports[`parse [ '/dir/**/', '!/dir/sub/' ] 1`] = `
+exports[`parse pattern ["/dir/**/", "!/dir/sub/"] 1`] = `
 [
   "dir/**/*/",
   "!dir/sub/",
 ]
 `;
 
-exports[`parse [ '/dir/**/', '!/dir/sub/file' ] 1`] = `
+exports[`parse pattern ["/dir/**/", "!/dir/sub/file"] 1`] = `
 [
   "dir/**/*/",
   "!dir/sub/file",
-]
-`;
-
-exports[`parse [[\\]] 1`] = `
-[
-  "**/[[\\]]",
-]
-`;
-
-exports[`parse [[] 1`] = `
-[
-  "**/[[]",
-]
-`;
-
-exports[`parse [[]] 1`] = `
-[
-  "**/[[]]",
-]
-`;
-
-exports[`parse []] 1`] = `
-[
-  "**/[]]",
-]
-`;
-
-exports[`parse [{}()] 1`] = `
-[
-  "**/[\\{\\}\\(\\)]",
-]
-`;
-
-exports[`parse [a\\\\bc] 1`] = `
-[
-  "**/[a\\\\bc]",
-]
-`;
-
-exports[`parse [a\\-c] 1`] = `
-[
-  "**/[a\\-c]",
-]
-`;
-
-exports[`parse [a\\bc] 1`] = `
-[
-  "**/[a\\bc]",
-]
-`;
-
-exports[`parse [a-c] 1`] = `
-[
-  "**/[a-c]",
-]
-`;
-
-exports[`parse [abc] 1`] = `
-[
-  "**/[abc]",
-]
-`;
-
-exports[`parse \\   1`] = `
-[
-  "**/ ",
-]
-`;
-
-exports[`parse \\!(a|b|c) 1`] = `
-[
-  "**/\\!\\(a|b|c\\)",
-]
-`;
-
-exports[`parse \\!file 1`] = `
-[
-  "**/\\!file",
-]
-`;
-
-exports[`parse \\#file 1`] = `
-[
-  "**/#file",
-]
-`;
-
-exports[`parse \\*c 1`] = `
-[
-  "**/\\*c",
-]
-`;
-
-exports[`parse \\[ 1`] = `
-[
-  "**/\\[",
-]
-`;
-
-exports[`parse \\[\\] 1`] = `
-[
-  "**/\\[\\]",
-]
-`;
-
-exports[`parse \\[] 1`] = `
-[
-  "**/\\[]",
-]
-`;
-
-exports[`parse \\[abc 1`] = `
-[
-  "**/\\[abc",
-]
-`;
-
-exports[`parse \\[abc\\] 1`] = `
-[
-  "**/\\[abc\\]",
-]
-`;
-
-exports[`parse \\[abc] 1`] = `
-[
-  "**/\\[abc]",
-]
-`;
-
-exports[`parse {a,b,c} 1`] = `
-[
-  "**/\\{a,b,c\\}",
-]
-`;
-
-exports[`parse a* 1`] = `
-[
-  "**/a*",
-]
-`;
-
-exports[`parse a*c 1`] = `
-[
-  "**/a*c",
-]
-`;
-
-exports[`parse a/*/c 1`] = `
-[
-  "a/*/c",
-]
-`;
-
-exports[`parse a/\\*/c 1`] = `
-[
-  "a/\\*/c",
-]
-`;
-
-exports[`parse a\\* 1`] = `
-[
-  "**/a\\*",
-]
-`;
-
-exports[`parse a\\*c 1`] = `
-[
-  "**/a\\*c",
-]
-`;
-
-exports[`parse a\\\\bc 1`] = `
-[
-  "**/a\\\\bc",
-]
-`;
-
-exports[`parse a\\bc 1`] = `
-[
-  "**/a\\bc",
-]
-`;
-
-exports[`parse dir 1`] = `
-[
-  "**/dir",
-]
-`;
-
-exports[`parse dir/ 1`] = `
-[
-  "**/dir/",
-]
-`;
-
-exports[`parse dir/file 1`] = `
-[
-  "dir/file",
-]
-`;
-
-exports[`parse fi  le 1`] = `
-[
-  "**/fi  le",
-]
-`;
-
-exports[`parse file
-dir/file 1`] = `
-[
-  "**/file",
-  "dir/file",
-]
-`;
-
-exports[`parse file
-dir/file 1`] = `
-[
-  "**/file",
-  "dir/file",
-]
-`;
-
-exports[`parse file   1`] = `
-[
-  "**/file",
-]
-`;
-
-exports[`parse file \\  1`] = `
-[
-  "**/file  ",
-]
-`;
-
-exports[`parse file 1`] = `
-[
-  "**/file",
-]
-`;
-
-exports[`parse file\\   1`] = `
-[
-  "**/file ",
-]
-`;
-
-exports[`parse x/!(a|b|c) 1`] = `
-[
-  "x/!\\(a|b|c\\)",
-]
-`;
-
-exports[`parse ﻿file 1`] = `
-[
-  "**/file",
 ]
 `;
