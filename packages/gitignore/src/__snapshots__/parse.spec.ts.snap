@@ -292,6 +292,12 @@ exports[`parse pattern "\\\\[abc]" 1`] = `
 ]
 `;
 
+exports[`parse pattern "\\\\\\\\" 1`] = `
+[
+  "**/\\\\",
+]
+`;
+
 exports[`parse pattern "{a,b,c}" 1`] = `
 [
   "**/\\{a,b,c\\}",

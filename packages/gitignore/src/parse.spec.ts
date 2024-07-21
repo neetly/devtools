@@ -135,6 +135,7 @@ describe("parse", () => {
     ["x/!(a|b|c)", { "x/x": false, "x/!(a|b|c)": true }],
 
     // backslashes
+    ["\\\\", { "\\": true, "\\\\": false }],
     ["a\\bc", { abc: true, "a\\bc": false }],
     ["a\\\\bc", { abc: false, "a\\bc": true }],
     ["a\\?", { a: false, ab: false, abc: false, "a?": true }],
@@ -173,15 +174,17 @@ describe("parse", () => {
     expect(patterns).toStrictEqual([]);
   });
 
-  // test.each([
-  //   // invalid patterns
-  //   "[]",
-  //   "[",
-  //   "[abc",
-  //   "[\\]",
-  //   "[\\[",
-  // ])("pattern %j", (content) => {
-  //   const { patterns } = parse(content);
-  //   expect(patterns).toStrictEqual([]);
-  // });
+  // TODO: Detect invalid patterns
+  test.skip.each([
+    // invalid patterns
+    "[]",
+    "[",
+    "[abc",
+    "[\\]",
+    "[\\[",
+    "\\",
+  ])("pattern %j", (content) => {
+    const { patterns } = parse(content);
+    expect(patterns).toStrictEqual([]);
+  });
 });
