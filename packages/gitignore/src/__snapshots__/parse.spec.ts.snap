@@ -354,22 +354,6 @@ exports[`parse pattern "fi  le" 1`] = `
 ]
 `;
 
-exports[`parse pattern "file
-dir/file" 1`] = `
-[
-  "**/file",
-  "dir/file",
-]
-`;
-
-exports[`parse pattern "file
-dir/file" 1`] = `
-[
-  "**/file",
-  "dir/file",
-]
-`;
-
 exports[`parse pattern "file  " 1`] = `
 [
   "**/file",
@@ -394,6 +378,20 @@ exports[`parse pattern "file\\\\  " 1`] = `
 ]
 `;
 
+exports[`parse pattern "file\\ndir/file" 1`] = `
+[
+  "**/file",
+  "dir/file",
+]
+`;
+
+exports[`parse pattern "file\\r\\ndir/file" 1`] = `
+[
+  "**/file",
+  "dir/file",
+]
+`;
+
 exports[`parse pattern "x/!(a|b|c)" 1`] = `
 [
   "x/!\\(a|b|c\\)",
@@ -406,14 +404,14 @@ exports[`parse pattern "﻿file" 1`] = `
 ]
 `;
 
-exports[`parse pattern ["/dir/**", "!/dir/file"] 1`] = `
+exports[`parse pattern ["/dir/**","!/dir/file"] 1`] = `
 [
   "dir/**/*",
   "!dir/file",
 ]
 `;
 
-exports[`parse pattern ["/dir/**", "!/dir/sub", "!/dir/sub/file"] 1`] = `
+exports[`parse pattern ["/dir/**","!/dir/sub","!/dir/sub/file"] 1`] = `
 [
   "dir/**/*",
   "!dir/sub",
@@ -421,7 +419,7 @@ exports[`parse pattern ["/dir/**", "!/dir/sub", "!/dir/sub/file"] 1`] = `
 ]
 `;
 
-exports[`parse pattern ["/dir/**", "!/dir/sub/", "!/dir/sub/file"] 1`] = `
+exports[`parse pattern ["/dir/**","!/dir/sub/","!/dir/sub/file"] 1`] = `
 [
   "dir/**/*",
   "!dir/sub/",
@@ -429,28 +427,28 @@ exports[`parse pattern ["/dir/**", "!/dir/sub/", "!/dir/sub/file"] 1`] = `
 ]
 `;
 
-exports[`parse pattern ["/dir/**", "!/dir/sub/file"] 1`] = `
+exports[`parse pattern ["/dir/**","!/dir/sub/file"] 1`] = `
 [
   "dir/**/*",
   "!dir/sub/file",
 ]
 `;
 
-exports[`parse pattern ["/dir/**/", "!/dir/sub"] 1`] = `
+exports[`parse pattern ["/dir/**/","!/dir/sub"] 1`] = `
 [
   "dir/**/*/",
   "!dir/sub",
 ]
 `;
 
-exports[`parse pattern ["/dir/**/", "!/dir/sub/"] 1`] = `
+exports[`parse pattern ["/dir/**/","!/dir/sub/"] 1`] = `
 [
   "dir/**/*/",
   "!dir/sub/",
 ]
 `;
 
-exports[`parse pattern ["/dir/**/", "!/dir/sub/file"] 1`] = `
+exports[`parse pattern ["/dir/**/","!/dir/sub/file"] 1`] = `
 [
   "dir/**/*/",
   "!dir/sub/file",
