@@ -37,7 +37,16 @@ export const parse = (content: string): { patterns: readonly string[] } => {
     })
 
     // Escape special characters
-    .map((pattern) => pattern.replace(/[(){}]/g, "\\$&"));
+    .map((pattern) => pattern.replace(/[(){}]/g, "\\$&"))
+
+    // Remove invalid patterns
+    .filter((pattern) => {
+      const result = /\\+$/.exec(pattern);
+      if (result && result[0].length % 2 !== 0) {
+        return false;
+      }
+      return true;
+    });
 
   return { patterns };
 };

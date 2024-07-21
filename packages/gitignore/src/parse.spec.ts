@@ -177,14 +177,15 @@ describe("parse", () => {
   });
 
   // TODO: Detect invalid patterns
-  test.skip.each([
+  test.each([
     // invalid patterns
-    "[]",
-    "[",
-    "[abc",
-    "[\\]",
-    "[\\[",
+    // "[]",
+    // "[",
+    // "[abc",
+    // "[\\]",
+    // "[\\[",
     "\\",
+    "\\\\\\",
   ])("pattern %j", (content) => {
     const { patterns } = parse(content);
     expect(patterns).toStrictEqual([]);
