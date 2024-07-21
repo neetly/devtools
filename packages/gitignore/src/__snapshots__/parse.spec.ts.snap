@@ -8,23 +8,29 @@ exports[`parse pattern "  file" 1`] = `
 ]
 `;
 
+exports[`parse pattern " !file" 1`] = `
+[
+  "**/ !file",
+]
+`;
+
+exports[`parse pattern " #file" 1`] = `
+[
+  "**/ #file",
+]
+`;
+
 exports[`parse pattern " \\\\ " 1`] = `
 [
   "**/  ",
 ]
 `;
 
-exports[`parse pattern "!" 1`] = `[]`;
-
-exports[`parse pattern "!/" 1`] = `[]`;
-
 exports[`parse pattern "!file" 1`] = `
 [
   "!**/file",
 ]
 `;
-
-exports[`parse pattern "" 1`] = `[]`;
 
 exports[`parse pattern "#file" 1`] = `[]`;
 
@@ -81,8 +87,6 @@ exports[`parse pattern "+(a|b|c)" 1`] = `
   "**/+\\(a|b|c\\)",
 ]
 `;
-
-exports[`parse pattern "/" 1`] = `[]`;
 
 exports[`parse pattern "/**" 1`] = `
 [
@@ -141,6 +145,12 @@ exports[`parse pattern "/file" 1`] = `
 exports[`parse pattern "?(a|b|c)" 1`] = `
 [
   "**/?\\(a|b|c\\)",
+]
+`;
+
+exports[`parse pattern "?c" 1`] = `
+[
+  "**/?c",
 ]
 `;
 
@@ -240,6 +250,12 @@ exports[`parse pattern "\\\\*c" 1`] = `
 ]
 `;
 
+exports[`parse pattern "\\\\?c" 1`] = `
+[
+  "**/\\?c",
+]
+`;
+
 exports[`parse pattern "\\\\[" 1`] = `
 [
   "**/\\[",
@@ -300,9 +316,33 @@ exports[`parse pattern "a/*/c" 1`] = `
 ]
 `;
 
+exports[`parse pattern "a/?/c" 1`] = `
+[
+  "a/?/c",
+]
+`;
+
 exports[`parse pattern "a/\\\\*/c" 1`] = `
 [
   "a/\\*/c",
+]
+`;
+
+exports[`parse pattern "a/\\\\?/c" 1`] = `
+[
+  "a/\\?/c",
+]
+`;
+
+exports[`parse pattern "a?" 1`] = `
+[
+  "**/a?",
+]
+`;
+
+exports[`parse pattern "a?c" 1`] = `
+[
+  "**/a?c",
 ]
 `;
 
@@ -315,6 +355,18 @@ exports[`parse pattern "a\\\\*" 1`] = `
 exports[`parse pattern "a\\\\*c" 1`] = `
 [
   "**/a\\*c",
+]
+`;
+
+exports[`parse pattern "a\\\\?" 1`] = `
+[
+  "**/a\\?",
+]
+`;
+
+exports[`parse pattern "a\\\\?c" 1`] = `
+[
+  "**/a\\?c",
 ]
 `;
 
@@ -452,5 +504,26 @@ exports[`parse pattern ["/dir/**/","!/dir/sub/file"] 1`] = `
 [
   "dir/**/*/",
   "!dir/sub/file",
+]
+`;
+
+exports[`parse pattern ["file"," !file"] 1`] = `
+[
+  "**/file",
+  "**/ !file",
+]
+`;
+
+exports[`parse pattern ["file","!file"] 1`] = `
+[
+  "**/file",
+  "!**/file",
+]
+`;
+
+exports[`parse pattern ["file","\\\\!file"] 1`] = `
+[
+  "**/file",
+  "**/\\!file",
 ]
 `;

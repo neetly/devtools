@@ -40,35 +40,34 @@ const createTester = (content: string) => {
 describe("parse", () => {
   test.each([
     // BOM
-    ["\uFEFFfile", { file: true }],
+    ["\uFEFFfile", { file: true, "\uFEFFfile": false }],
 
     // LF and CRLF
     ["file\ndir/file", { file: true, "dir/file": true }],
     ["file\r\ndir/file", { file: true, "dir/file": true }],
 
     // comments
-    ["#file", { "#file": false }],
-    ["\\#file", { "#file": true }],
+    ["#file", { file: false, "#file": false }],
+    ["\\#file", { file: false, "#file": true }],
+    [" #file", { file: false, "#file": false, " #file": true }],
 
     // spaces
     ["  ", { " ": false, "  ": false }],
-    [" \\ ", { " ": false, "  ": true }],
     ["\\  ", { " ": true, "  ": false }],
+    [" \\ ", { " ": false, "  ": true }],
     ["  file", { file: false, " file": false, "  file": true }],
     ["fi  le", { file: false, "fi le": false, "fi  le": true }],
     ["file  ", { file: true, "file ": false, "file  ": false }],
     ["file\\  ", { file: false, "file ": true, "file  ": false }],
     ["file \\ ", { file: false, "file ": false, "file  ": true }],
 
-    // empty and non-sense patterns
-    ["", { file: false }],
-    ["!", { file: false }],
-    ["/", { file: false }],
-    ["!/", { file: false }],
-
     // negative patterns
     ["!file", { file: false, "!file": false }],
+    [["file", "!file"], { file: false, "!file": false }],
     ["\\!file", { file: false, "!file": true }],
+    [["file", "\\!file"], { file: true, "!file": true }],
+    [" !file", { file: false, "!file": false, " !file": true }],
+    [["file", " !file"], { file: true, "!file": false, " !file": true }],
 
     // slashes ("/") and two consecutive asterisks ("**")
     ["file", { file: true, "sub/file": true }],
@@ -106,6 +105,13 @@ describe("parse", () => {
     [["/dir/**/", "!/dir/sub/file"], { "dir/sub/file": true }],
 
     // globs
+    ["a?", { a: false, ab: true, abc: false }],
+    ["?c", { c: false, bc: true, abc: false }],
+    ["a?c", { ac: false, abc: true, abbc: false, "a/c": false }],
+    [
+      "a/?/c",
+      { "a/c": false, "a/b/c": true, "a/bb/c": false, "a/b/b/c": false },
+    ],
     ["a*", { a: true, ab: true, abc: true }],
     ["*c", { c: true, bc: true, abc: true }],
     ["a*c", { ac: true, abc: true, abbc: true, "a/c": false }],
@@ -131,6 +137,10 @@ describe("parse", () => {
     // backslashes
     ["a\\bc", { abc: true, "a\\bc": false }],
     ["a\\\\bc", { abc: false, "a\\bc": true }],
+    ["a\\?", { a: false, ab: false, abc: false, "a?": true }],
+    ["\\?c", { c: false, bc: false, abc: false, "?c": true }],
+    ["a\\?c", { ac: false, abc: false, abbc: false, "a?c": true }],
+    ["a/\\?/c", { "a/b/c": false, "a/bb/c": false, "a/?/c": true }],
     ["a\\*", { a: false, ab: false, abc: false, "a*": true }],
     ["\\*c", { c: false, bc: false, abc: false, "*c": true }],
     ["a\\*c", { ac: false, abc: false, abbc: false, "a*c": true }],
@@ -152,12 +162,26 @@ describe("parse", () => {
     }
   });
 
-  // invalid patterns
-  // test.each(["[]", "[", "[abc", "[\\]", "[\\["])(
-  //   "invalid pattern %j",
-  //   (content) => {
-  //     const { patterns } = parse(content);
-  //     expect(patterns).toStrictEqual([]);
-  //   },
-  // );
+  test.each([
+    // empty and non-sense patterns
+    "",
+    "!",
+    "/",
+    "!/",
+  ])("pattern %j", (content) => {
+    const { patterns } = parse(content);
+    expect(patterns).toStrictEqual([]);
+  });
+
+  // test.each([
+  //   // invalid patterns
+  //   "[]",
+  //   "[",
+  //   "[abc",
+  //   "[\\]",
+  //   "[\\[",
+  // ])("pattern %j", (content) => {
+  //   const { patterns } = parse(content);
+  //   expect(patterns).toStrictEqual([]);
+  // });
 });
