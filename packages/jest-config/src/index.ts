@@ -5,6 +5,8 @@ export const createConfig = async (): Promise<Config> => {
   return {
     injectGlobals: false,
 
+    roots: ["<rootDir>/src/"],
+
     testMatch: ["<rootDir>/src/**/*.spec.{js,mjs,cjs,ts,tsx,mts,cts}"],
 
     resolver: import.meta.resolve("@neetly/jest-resolver"),
