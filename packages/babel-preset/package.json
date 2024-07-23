@@ -37,6 +37,6 @@
     "@babel/core": "8.0.0-alpha.11",
     "@neetly/tsconfig": "workspace:*",
     "@types/node": "20.14.11",
-    "typescript": "5.5.3"
+    "typescript": "5.5.4"
   }
 }
