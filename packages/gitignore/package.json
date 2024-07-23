@@ -27,6 +27,6 @@
     "@neetly/tsconfig": "workspace:*",
     "jest": "30.0.0-alpha.5",
     "minimatch": "10.0.1",
-    "typescript": "5.5.3"
+    "typescript": "5.5.4"
   }
 }
