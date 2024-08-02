@@ -2241,7 +2241,7 @@ __metadata:
     "@babel/preset-react": "npm:8.0.0-alpha.11"
     "@babel/preset-typescript": "npm:8.0.0-alpha.11"
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.11"
+    "@types/node": "npm:20.14.14"
     typescript: "npm:5.5.4"
   peerDependencies:
     "@babel/core": "*"
@@ -2254,7 +2254,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:8.0.0-alpha.11"
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.11"
+    "@types/node": "npm:20.14.14"
     typescript: "npm:5.5.4"
   peerDependencies:
     "@babel/core": "*"
@@ -2289,7 +2289,7 @@ __metadata:
     "@neetly/tsconfig": "workspace:*"
     "@types/eslint": "npm:8.56.11"
     "@types/eslint__js": "npm:8.42.3"
-    "@types/node": "npm:20.14.11"
+    "@types/node": "npm:20.14.14"
     "@typescript-eslint/utils": "npm:8.0.0-alpha.51"
     eslint: "npm:9.7.0"
     eslint-plugin-react-hooks: "npm:5.1.0-rc.0"
@@ -2310,7 +2310,7 @@ __metadata:
   resolution: "@neetly/eslint-plugin@workspace:packages/eslint-plugin"
   dependencies:
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.11"
+    "@types/node": "npm:20.14.14"
     "@typescript-eslint/utils": "npm:8.0.0-alpha.51"
     eslint: "npm:9.7.0"
     typescript: "npm:5.5.4"
@@ -2341,7 +2341,7 @@ __metadata:
     "@neetly/babel-utils": "workspace:*"
     "@neetly/jest-resolver": "workspace:*"
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.11"
+    "@types/node": "npm:20.14.14"
     babel-jest: "npm:30.0.0-alpha.5"
     jest: "npm:30.0.0-alpha.5"
     typescript: "npm:5.5.4"
@@ -2355,7 +2355,7 @@ __metadata:
   resolution: "@neetly/jest-resolver@workspace:packages/jest-resolver"
   dependencies:
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.11"
+    "@types/node": "npm:20.14.14"
     enhanced-resolve: "npm:5.17.0"
     jest-resolve: "npm:30.0.0-alpha.5"
     typescript: "npm:5.5.4"
@@ -2377,7 +2377,7 @@ __metadata:
   resolution: "@neetly/yarn-constraints@workspace:packages/yarn-constraints"
   dependencies:
     "@neetly/tsconfig": "workspace:*"
-    "@types/node": "npm:20.14.11"
+    "@types/node": "npm:20.14.14"
     "@yarnpkg/types": "npm:4.0.0"
     typescript: "npm:5.5.4"
   peerDependencies:
@@ -2670,12 +2670,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.14.11":
-  version: 20.14.11
-  resolution: "@types/node@npm:20.14.11"
+"@types/node@npm:*, @types/node@npm:20.14.14":
+  version: 20.14.14
+  resolution: "@types/node@npm:20.14.14"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/5306becc0ff41d81b1e31524bd376e958d0741d1ce892dffd586b9ae0cb6553c62b0d62abd16da8bea6b9a2c17572d360450535d7c073794b0cef9cb4e39691e
+  checksum: 10c0/4fc8d368df2b6f5497698327b30db68d7d20e32221ce7d057fb15cbd5834685b2fde0440609e4cb2204e5d305b928f008faf41b950a425f3fd55b60cb1b997cf
   languageName: node
   linkType: hard
 
