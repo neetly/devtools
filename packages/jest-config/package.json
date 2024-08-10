@@ -25,7 +25,7 @@
     "@neetly/babel-preset": "workspace:*",
     "@neetly/babel-utils": "workspace:*",
     "@neetly/jest-resolver": "workspace:*",
-    "babel-jest": "30.0.0-alpha.5"
+    "babel-jest": "30.0.0-alpha.6"
   },
   "peerDependencies": {
     "jest": "*"
@@ -33,7 +33,7 @@
   "devDependencies": {
     "@neetly/tsconfig": "workspace:*",
     "@types/node": "20.14.11",
-    "jest": "30.0.0-alpha.5",
+    "jest": "30.0.0-alpha.6",
     "typescript": "5.5.4"
   }
 }
