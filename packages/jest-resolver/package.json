@@ -21,7 +21,7 @@
     "prepack": "nx build && cp ../../LICENSE ./"
   },
   "dependencies": {
-    "enhanced-resolve": "5.17.0",
+    "enhanced-resolve": "5.18.0",
     "jest-resolve": "30.0.0-alpha.5"
   },
   "devDependencies": {

@@ -2356,7 +2356,7 @@ __metadata:
   dependencies:
     "@neetly/tsconfig": "workspace:*"
     "@types/node": "npm:20.14.11"
-    enhanced-resolve: "npm:5.17.0"
+    enhanced-resolve: "npm:5.18.0"
     jest-resolve: "npm:30.0.0-alpha.5"
     typescript: "npm:5.5.4"
   languageName: unknown
@@ -3763,13 +3763,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:5.17.0":
-  version: 5.17.0
-  resolution: "enhanced-resolve@npm:5.17.0"
+"enhanced-resolve@npm:5.18.0":
+  version: 5.18.0
+  resolution: "enhanced-resolve@npm:5.18.0"
   dependencies:
     graceful-fs: "npm:^4.2.4"
     tapable: "npm:^2.2.0"
-  checksum: 10c0/90065e58e4fd08e77ba47f827eaa17d60c335e01e4859f6e644bb3b8d0e32b203d33894aee92adfa5121fa262f912b48bdf0d0475e98b4a0a1132eea1169ad37
+  checksum: 10c0/5fcc264a6040754ab5b349628cac2bb5f89cee475cbe340804e657a5b9565f70e6aafb338d5895554eb0ced9f66c50f38a255274a0591dcb64ee17c549c459ce
   languageName: node
   linkType: hard
 
