@@ -29,7 +29,7 @@
   "devDependencies": {
     "@neetly/tsconfig": "workspace:*",
     "@types/node": "20.14.11",
-    "eslint": "9.7.0",
+    "eslint": "9.19.0",
     "typescript": "5.5.4"
   }
 }
