@@ -21,7 +21,7 @@
     "prepack": "nx build && cp ../../LICENSE ./"
   },
   "dependencies": {
-    "@babel/core": "8.0.0-alpha.11",
+    "@babel/core": "8.0.0-alpha.15",
     "@neetly/babel-preset": "workspace:*",
     "@neetly/babel-utils": "workspace:*",
     "@neetly/jest-resolver": "workspace:*",

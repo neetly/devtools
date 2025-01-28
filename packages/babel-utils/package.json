@@ -24,7 +24,7 @@
     "@babel/core": "*"
   },
   "devDependencies": {
-    "@babel/core": "8.0.0-alpha.11",
+    "@babel/core": "8.0.0-alpha.15",
     "@neetly/tsconfig": "workspace:*",
     "@types/node": "22.12.0",
     "typescript": "5.7.3"
