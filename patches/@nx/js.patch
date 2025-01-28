@@ -1,0 +1,12 @@
+diff --git a/src/plugins/typescript/plugin.js b/src/plugins/typescript/plugin.js
+index edbf6c01d8c0d42b4c396bd11954cc99382f67f2..9a4678cbf2b9f00ec0859c5d4689724cb05a0083 100644
+--- a/src/plugins/typescript/plugin.js
++++ b/src/plugins/typescript/plugin.js
+@@ -205,7 +205,6 @@ function getInputs(namedInputs, configFilePath, tsConfig, internalProjectReferen
+     extendedConfigFiles.files.forEach((configPath) => {
+         configFiles.add(configPath);
+     });
+-    externalDependencies.push(...extendedConfigFiles.packages);
+     const includePaths = new Set();
+     const excludePaths = new Set();
+     const projectTsConfigFiles = [

@@ -1,32 +1,29 @@
 {
   "name": "@neetly/devtools",
   "private": true,
+  "homepage": "https://github.com/neetly/devtools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neetly/devtools.git"
+  },
+  "license": "MIT",
   "workspaces": [
-    "./packages/*"
+    "packages/*"
   ],
   "type": "module",
   "scripts": {
-    "check": "eslint && prettier --check .",
-    "check:fix": "eslint --fix && prettier --write .",
-    "test": "nx run-many --targets test",
-    "build": "nx run-many --targets build",
-    "publish": "yarn workspaces foreach --all --no-private npm publish --access public --tolerate-republish"
+    "check": "nx sync:check && prettier --check . && biome check",
+    "check:fix": "nx sync && prettier --write . && biome check --write",
+    "build": "nx run-many --target=build"
   },
   "devDependencies": {
-    "@babel/cli": "8.0.0-alpha.11",
-    "@babel/core": "8.0.0-alpha.11",
-    "@neetly/babel-preset": "workspace:*",
-    "@neetly/eslint-config": "workspace:*",
+    "@biomejs/biome": "1.9.4",
+    "@neetly/biome-config": "workspace:*",
     "@neetly/yarn-constraints": "workspace:*",
-    "@yarnpkg/types": "4.0.0",
-    "eslint": "9.19.0",
-    "nx": "19.8.14",
+    "@nx/js": "patch:@nx/js@npm:20.4.0#~/patches/@nx/js.patch",
+    "nx": "20.4.0",
     "prettier": "3.4.2",
     "typescript": "5.7.3"
-  },
-  "resolutions": {
-    "babel-jest@npm:30.0.0-alpha.5": "patch:babel-jest@npm:30.0.0-alpha.5#~/patches/babel-jest.patch",
-    "jest-resolve@npm:30.0.0-alpha.5": "patch:jest-resolve@npm:30.0.0-alpha.5#~/patches/jest-resolve.patch"
   },
   "packageManager": "yarn@4.6.0"
 }

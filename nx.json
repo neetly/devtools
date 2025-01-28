@@ -1,10 +1,30 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
+
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["{projectRoot}/tsconfig.tsbuildinfo", "{projectRoot}/lib/"],
-      "cache": true
+      "dependsOn": ["^build"]
+    }
+  },
+
+  "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "build:types"
+        }
+      }
+    }
+  ],
+
+  "release": {
+    "versionPlans": true,
+    "releaseTagPattern": "{version}",
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github"
+      }
     }
   }
 }

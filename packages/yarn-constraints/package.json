@@ -21,12 +21,12 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "./src",
-    "./lib"
+    "src",
+    "lib"
   ],
   "scripts": {
-    "build": "tsc --build",
-    "prepack": "nx build && cp ../../LICENSE ./"
+    "build": "nx build:types",
+    "prepack": "nx build && cp ../../LICENSE ./LICENSE"
   },
   "dependencies": {
     "@yarnpkg/types": "4.0.0"

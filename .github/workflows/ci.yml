@@ -5,6 +5,7 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
       - uses: moonrepo/setup-toolchain@v0
@@ -15,10 +16,5 @@ jobs:
       - run: yarn constraints
       - run: yarn dedupe --check
 
-      - run: yarn nx run-many --projects @neetly/eslint-config --targets build
       - run: yarn check
-
-      - run: yarn nx run-many --projects @neetly/jest-config --targets build
-      - run: yarn test
-
       - run: yarn build

@@ -1,28 +1,45 @@
-/**
- * @import { Yarn } from "@yarnpkg/types"
- */
+/** @import { Yarn } from "@yarnpkg/types" */
 
-/**
- * @param {Yarn.Constraints.Context} context
- */
+/** @param {Yarn.Constraints.Context} context */
 exports.recommended = ({ Yarn }) => {
+  exports.enforceMetadata({ Yarn });
   exports.enforceTypeModule({ Yarn });
   exports.enforceProperExports({ Yarn });
   exports.enforceConsistentDependencies({ Yarn });
 };
 
-/**
- * @param {Yarn.Constraints.Context} context
- */
+/** @param {Yarn.Constraints.Context} context */
+exports.enforceMetadata = ({ Yarn }) => {
+  const rootWorkspace = Yarn.workspace({ cwd: "." });
+  if (rootWorkspace) {
+    const { homepage, repository, license } = rootWorkspace.manifest;
+    for (const workspace of Yarn.workspaces()) {
+      if (workspace.cwd !== ".") {
+        if (homepage) {
+          workspace.set("homepage", homepage);
+        }
+        if (repository) {
+          workspace.set("repository", {
+            ...repository,
+            directory: workspace.cwd,
+          });
+        }
+        if (license) {
+          workspace.set("license", license);
+        }
+      }
+    }
+  }
+};
+
+/** @param {Yarn.Constraints.Context} context */
 exports.enforceTypeModule = ({ Yarn }) => {
   for (const workspace of Yarn.workspaces()) {
     workspace.set("type", "module");
   }
 };
 
-/**
- * @param {Yarn.Constraints.Context} context
- */
+/** @param {Yarn.Constraints.Context} context */
 exports.enforceProperExports = ({ Yarn }) => {
   for (const workspace of Yarn.workspaces()) {
     if (!workspace.manifest.private) {
@@ -50,9 +67,7 @@ exports.enforceProperExports = ({ Yarn }) => {
   }
 };
 
-/**
- * @param {Yarn.Constraints.Context} context
- */
+/** @param {Yarn.Constraints.Context} context */
 exports.enforceConsistentDependencies = ({ Yarn }) => {
   for (const dependency of Yarn.dependencies()) {
     if (Yarn.workspace({ ident: dependency.ident })) {

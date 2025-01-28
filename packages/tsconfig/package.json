@@ -15,10 +15,10 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "./src"
+    "src"
   ],
   "scripts": {
-    "prepack": "cp ../../LICENSE ./"
+    "prepack": "cp ../../LICENSE ./LICENSE"
   },
   "peerDependencies": {
     "typescript": "*"
