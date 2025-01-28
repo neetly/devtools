@@ -21,12 +21,12 @@
     "prepack": "nx build && cp ../../LICENSE ./"
   },
   "dependencies": {
-    "enhanced-resolve": "5.17.0",
+    "enhanced-resolve": "5.18.0",
     "jest-resolve": "30.0.0-alpha.5"
   },
   "devDependencies": {
     "@neetly/tsconfig": "workspace:*",
-    "@types/node": "20.14.11",
-    "typescript": "5.5.4"
+    "@types/node": "22.12.0",
+    "typescript": "5.7.3"
   }
 }

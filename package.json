@@ -19,14 +19,14 @@
     "@neetly/eslint-config": "workspace:*",
     "@neetly/yarn-constraints": "workspace:*",
     "@yarnpkg/types": "4.0.0",
-    "eslint": "9.7.0",
-    "nx": "19.5.2",
-    "prettier": "3.3.3",
-    "typescript": "5.5.4"
+    "eslint": "9.19.0",
+    "nx": "19.8.14",
+    "prettier": "3.4.2",
+    "typescript": "5.7.3"
   },
   "resolutions": {
     "babel-jest@npm:30.0.0-alpha.5": "patch:babel-jest@npm:30.0.0-alpha.5#~/patches/babel-jest.patch",
     "jest-resolve@npm:30.0.0-alpha.5": "patch:jest-resolve@npm:30.0.0-alpha.5#~/patches/jest-resolve.patch"
   },
-  "packageManager": "yarn@4.3.1"
+  "packageManager": "yarn@4.6.0"
 }
