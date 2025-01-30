@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "enhanced-resolve": "5.18.0",
-    "jest-resolve": "30.0.0-alpha.5"
+    "jest-resolve": "30.0.0-alpha.7"
   },
   "devDependencies": {
     "@neetly/tsconfig": "workspace:*",
