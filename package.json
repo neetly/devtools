@@ -14,7 +14,9 @@
   "scripts": {
     "check": "nx sync:check && prettier --check . && biome check",
     "check:fix": "nx sync && prettier --write . && biome check --write",
-    "build": "nx run-many --target=build"
+    "build": "nx run-many --target=build",
+    "release": "nx release --skip-publish",
+    "publish": "yarn workspaces foreach --all --no-private npm publish --tolerate-republish"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
