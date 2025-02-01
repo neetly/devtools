@@ -83,7 +83,7 @@ exports.enforceConsistentDependencies = ({ Yarn }) => {
     if (
       !Yarn.workspace({ ident: dependency.ident }) &&
       dependency.type !== "peerDependencies" &&
-      !/(?<!^npm):/.test(dependency.range) &&
+      !dependency.range.includes(":") &&
       dependency.resolution?.version
     ) {
       dependency.update(dependency.resolution.version);
