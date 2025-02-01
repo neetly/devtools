@@ -1,0 +1,28 @@
+{
+  "name": "@neetly/nx-config",
+  "version": "1.0.0-alpha.17",
+  "homepage": "https://github.com/neetly/devtools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neetly/devtools.git",
+    "directory": "packages/nx-config"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/nx.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "prepack": "cp ../../LICENSE ./LICENSE"
+  },
+  "peerDependencies": {
+    "nx": "*"
+  },
+  "devDependencies": {
+    "nx": "20.4.0"
+  }
+}

@@ -1,6 +1,8 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
 
+  "extends": "@neetly/nx-config",
+
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"]
@@ -16,18 +18,5 @@
         }
       }
     }
-  ],
-
-  "release": {
-    "versionPlans": true,
-    "releaseTagPattern": "{version}",
-    "git": {
-      "commitMessage": "Release {version}"
-    },
-    "changelog": {
-      "workspaceChangelog": {
-        "createRelease": "github"
-      }
-    }
-  }
+  ]
 }

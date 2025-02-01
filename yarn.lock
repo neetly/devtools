@@ -1416,6 +1416,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@neetly/nx-config@workspace:packages/nx-config":
+  version: 0.0.0-use.local
+  resolution: "@neetly/nx-config@workspace:packages/nx-config"
+  dependencies:
+    nx: "npm:20.4.0"
+  peerDependencies:
+    nx: "*"
+  languageName: unknown
+  linkType: soft
+
 "@neetly/tsconfig@workspace:*, @neetly/tsconfig@workspace:packages/tsconfig":
   version: 0.0.0-use.local
   resolution: "@neetly/tsconfig@workspace:packages/tsconfig"
