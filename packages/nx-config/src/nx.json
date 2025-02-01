@@ -7,6 +7,11 @@
     "git": {
       "commitMessage": "Release {version}"
     },
+    "version": {
+      "generatorOptions": {
+        "preserveLocalDependencyProtocols": true
+      }
+    },
     "changelog": {
       "workspaceChangelog": false
     }
