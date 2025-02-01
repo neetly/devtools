@@ -1,6 +1,6 @@
 {
   "name": "@neetly/yarn-constraints",
-  "version": "1.0.0-alpha.17",
+  "version": "1.0.0-alpha.18",
   "homepage": "https://github.com/neetly/devtools",
   "repository": {
     "type": "git",
@@ -35,7 +35,7 @@
     "@yarnpkg/types": "*"
   },
   "devDependencies": {
-    "@neetly/tsconfig": "workspace:*",
+    "@neetly/tsconfig": "1.0.0-alpha.18",
     "@types/node": "22.13.0",
     "typescript": "5.7.3"
   }
