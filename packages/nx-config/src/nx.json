@@ -8,9 +8,7 @@
       "commitMessage": "Release {version}"
     },
     "changelog": {
-      "workspaceChangelog": {
-        "createRelease": "github"
-      }
+      "workspaceChangelog": false
     }
   }
 }
