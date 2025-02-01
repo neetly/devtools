@@ -35,7 +35,7 @@
     "@yarnpkg/types": "*"
   },
   "devDependencies": {
-    "@neetly/tsconfig": "1.0.0-alpha.18",
+    "@neetly/tsconfig": "workspace:*",
     "@types/node": "22.13.0",
     "typescript": "5.7.3"
   }
