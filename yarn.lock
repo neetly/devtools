@@ -1426,7 +1426,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@neetly/tsconfig@npm:1.0.0-alpha.18, @neetly/tsconfig@workspace:packages/tsconfig":
+"@neetly/tsconfig@workspace:*, @neetly/tsconfig@workspace:packages/tsconfig":
   version: 0.0.0-use.local
   resolution: "@neetly/tsconfig@workspace:packages/tsconfig"
   dependencies:
@@ -1440,7 +1440,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@neetly/yarn-constraints@workspace:packages/yarn-constraints"
   dependencies:
-    "@neetly/tsconfig": "npm:1.0.0-alpha.18"
+    "@neetly/tsconfig": "workspace:*"
     "@types/node": "npm:22.13.0"
     "@yarnpkg/types": "npm:4.0.0"
     typescript: "npm:5.7.3"
