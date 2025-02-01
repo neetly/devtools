@@ -1409,7 +1409,7 @@ __metadata:
     "@biomejs/biome": "npm:1.9.4"
     "@neetly/biome-config": "workspace:*"
     "@neetly/yarn-constraints": "workspace:*"
-    "@nx/js": "patch:@nx/js@npm:20.4.0#~/patches/@nx/js.patch"
+    "@nx/js": "patch:@nx/js@20.4.0#~/patches/@nx/js.patch"
     nx: "npm:20.4.0"
     prettier: "npm:3.4.2"
     typescript: "npm:5.7.3"
@@ -1510,7 +1510,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nx/js@patch:@nx/js@npm:20.4.0#~/patches/@nx/js.patch":
+"@nx/js@patch:@nx/js@20.4.0#~/patches/@nx/js.patch":
   version: 20.4.0
   resolution: "@nx/js@patch:@nx/js@npm%3A20.4.0#~/patches/@nx/js.patch::version=20.4.0&hash=8f1447"
   dependencies:
