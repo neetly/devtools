@@ -23,7 +23,7 @@
     "@neetly/biome-config": "workspace:*",
     "@neetly/yarn-constraints": "workspace:*",
     "@nx/js": "patch:@nx/js@20.4.0#~/patches/@nx/js.patch",
-    "nx": "20.4.3",
+    "nx": "20.4.4",
     "prettier": "3.5.1",
     "typescript": "5.7.3"
   },
