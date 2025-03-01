@@ -29,7 +29,7 @@
     "prepack": "nx build && cp ../../LICENSE ./LICENSE"
   },
   "dependencies": {
-    "@yarnpkg/types": "4.0.0"
+    "@yarnpkg/types": "4.0.1"
   },
   "peerDependencies": {
     "@yarnpkg/types": "*"
