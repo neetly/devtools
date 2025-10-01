@@ -25,7 +25,7 @@
     "@nx/js": "patch:@nx/js@20.4.0#~/patches/@nx/js.patch",
     "nx": "20.5.0",
     "prettier": "3.5.3",
-    "typescript": "5.8.2"
+    "typescript": "5.9.3"
   },
   "packageManager": "yarn@4.7.0"
 }
