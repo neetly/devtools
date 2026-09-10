@@ -19,7 +19,7 @@
     "publish": "yarn workspaces foreach --all --no-private npm publish --access=public --tolerate-republish"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.5.13",
     "@neetly/biome-config": "workspace:*",
     "@neetly/yarn-constraints": "workspace:*",
     "@nx/js": "patch:@nx/js@20.4.0#~/patches/@nx/js.patch",
